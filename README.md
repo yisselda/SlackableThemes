@@ -19,6 +19,9 @@ You'll be able to choose between:
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Contribute!
+[See how you can contribute :)](CONTRIBUTE.md)
+
 ## Deployed app lives on Heroku
 
 https://slackable-themes.herokuapp.com/
