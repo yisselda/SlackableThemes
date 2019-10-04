@@ -9,8 +9,12 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("SideBar", () => {
   let wrapper;
 
+  const channels = ["general", "react"]
+  const messages = ['yisselda', 'terrance', 'christine']
+  const apps = ['Install Google Drive']
+
   beforeEach(() => {
-    wrapper = shallow(<SideBar/>);
+    wrapper = shallow(<SideBar channels={channels} />);
   })
   
   it('render a <div>', () => {
@@ -27,14 +31,16 @@ describe("SideBar", () => {
 
   it('renders a channel section', () => {
     expect(wrapper.find('h2.channels').text()).toBe('Channels');
-    // expect(wrapper.find('channels-list').length()).toBe(3);
+    expect(wrapper.find('ul.channels-list').children()).toHaveLength(channels.length);
   })
 
   it('renders a Direct Messages section', () => {
     expect(wrapper.find('h2.direct-messages').text()).toBe('Direct Messages');
+    expect(wrapper.find('ul.messages-list').children()).toHaveLength(messages.length);
   })
 
   it('renders an Apps section', () => {
     expect(wrapper.find('h2.apps').text()).toBe('Apps');
+    expect(wrapper.find('ul.apps-list').children()).toHaveLength(apps.length);
   })
 })
