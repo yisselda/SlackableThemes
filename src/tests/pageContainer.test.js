@@ -20,6 +20,4 @@ describe("PageContainer", () => {
     expect(wrapper.childAt(0).type()).toBe(SideBar)
     expect(wrapper.childAt(1).type()).toBe(DashBoard)
   })
-
-
 })

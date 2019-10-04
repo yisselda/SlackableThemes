@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import PageContainer from './containers/PageContainer';
 
 function App() {
   return (
     <div className='App'>
+      <PageContainer/>
     </div>
   );
 }
