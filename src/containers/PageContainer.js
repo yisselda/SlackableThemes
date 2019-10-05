@@ -4,7 +4,7 @@ import DashBoard from '../components/DashBoard';
 
 const PageContainer = props => {
   return (
-    <div>
+    <div className='page-container'>
       <SideBar/>
       <DashBoard/>
     </div>

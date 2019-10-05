@@ -1,0 +1,34 @@
+@import 'colors';
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: $green;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: minmax(250px, max-content) auto;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: $purple;
+  color: #fff;
+  padding: 16px;
+}
+
+.dashboard {
+  padding: 16px;
+}
