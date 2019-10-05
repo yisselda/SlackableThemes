@@ -1,12 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 import PageContainer from '../containers/PageContainer'
-import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme'
 import SideBar from '../components/SideBar'
 import DashBoard from '../components/DashBoard'
-
-Enzyme.configure({ adapter: new Adapter() });
 
 describe("PageContainer", () => {
   let wrapper;

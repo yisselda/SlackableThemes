@@ -1,16 +1,16 @@
 import React from 'react';
 import Enzyme from 'enzyme';
 import { shallow } from 'enzyme';
-import ColorPickers from '../components/ColorPickers';
+import ColorInput from '../components/ColorInput';
 
-describe('ColorPickers', () => {
+describe('ColorInput', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<ColorPickers/>);
+    wrapper = shallow(<ColorInput/>);
   })
 
-  it('render <ColorPickers>', () => {
+  it('render <ColorInput>', () => {
     expect(wrapper).toBeDefined();
   })
 });
