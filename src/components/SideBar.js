@@ -1,5 +1,7 @@
 import React from 'react'
 
+import styles from "../styles/SideBar.modules.css";
+
 const SideBar = () => {
   const channels = ['general', 'random']
   const messages = ['yisselda', 'terrance', 'christine']

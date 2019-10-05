@@ -1,0 +1,11 @@
+.sidebar {
+    width: 17rem;
+    height: 100%;
+    position: relative;
+    padding: 1.5em;
+    background-color: #902092;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    opacity: .8;
+}
