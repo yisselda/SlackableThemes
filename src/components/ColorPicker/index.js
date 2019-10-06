@@ -7,7 +7,6 @@ export default function ColorPicker({ label, onChange, color }) {
 
     const onColorChange = (e) => {
         const newValue = e.target.value;
-        console.log(newValue)
         if (newValue.length > 7) return;
         if (newValue.length <= 1) { onChange('#'); return; };
         if (isValidHex(newValue[newValue.length - 1])) onChange(newValue);
