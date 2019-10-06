@@ -2,23 +2,22 @@
   display: flex;
   flex-direction: column;
   line-height: 30px;
-  margin: auto;
-  width: 80px;
+  width: 90px;
 }
 
 .content {
   display: flex;
-  flex-direction: row;
   border: 1px solid #4d4d4d;
   height: 20px;
   border-radius: 2px;
 }
 
 .color-sq {
+  border-right: 1px solid #4d4d4d;
+  cursor: pointer;
   display: inline-block;
   height: 100%;
   width: 30px;
-  border-right: 1px solid #4d4d4d;
 }
 
 .color-input {
@@ -27,6 +26,24 @@
   outline: none;
   padding: 0 8px;
   width: 100%;
+}
+
+.color-picker {
+  position: absolute;
+  margin-top: 37px;
+  z-index: 999;
+}
+
+.click-outside-area {
+  background-color: transparent;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 998;
 }
 
 .label {
