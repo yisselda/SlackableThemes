@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.scss';
+import './styles/App.scss';
 import PageContainer from './containers/PageContainer';
 
 function App() {
