@@ -32,7 +32,7 @@ export default function ColorPicker({ label }) {
             <div className="color-sq" onClick={handleDisplay} style={{ backgroundColor: color }}></div>
             <input className="color-input" type="text" value={color} onChange={onColorChange} />
         </div>
-        {shouldDisplay && <ChromePicker className='color-picker' color={color} onChange={onColorPickChange} />}
+        {shouldDisplay && <ChromePicker className='color-picker' color={color} disableAlpha onChange={onColorPickChange} />}
         {shouldDisplay && <div className="click-outside-area" onClick={() => handleDisplay()}/>}
     </div>
 }
