@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/sidebar.scss'
 
 const SideBar = () => {
   const channels = ['general', 'random']
