@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
-import './CustomPicker';
 import './ColorPicker.css';
 
 export default function ColorPicker({ label }) {
