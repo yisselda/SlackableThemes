@@ -5,6 +5,8 @@ import Adapter from 'enzyme-adapter-react-16';
 import Enzyme from 'enzyme'
 import SideBar from '../components/SideBar'
 import DashBoard from '../components/DashBoard'
+import WorkspaceSideBar from '../components/WorkspaceSideBar';
+
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -17,7 +19,8 @@ describe("PageContainer", () => {
   })
 
   it('renders a <SideBar> and <DashBoard>', () => {
-    expect(wrapper.childAt(0).type()).toBe(SideBar)
-    expect(wrapper.childAt(1).type()).toBe(DashBoard)
+    expect(wrapper.childAt(0).type()).toBe(WorkspaceSideBar)    
+    expect(wrapper.childAt(1).type()).toBe(SideBar)
+    expect(wrapper.childAt(2).type()).toBe(DashBoard)
   })
 })
