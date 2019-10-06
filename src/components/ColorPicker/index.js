@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
 import './ColorPicker.css';
 
-export default function ColorPicker({ label }) {
-    let [color, setColor] = useState('#000');
+export default function ColorPicker({ label, onChange, color }) {
     let [shouldDisplay, setDisplay] = useState(false);
 
     const onColorChange = (e) => {
         const newValue = e.target.value;
         console.log(newValue)
         if (newValue.length > 7) return;
-        if (newValue.length <= 1) { setColor('#'); return; };
-        if (isValidHex(newValue[newValue.length - 1])) setColor(newValue);
+        if (newValue.length <= 1) { onChange('#'); return; };
+        if (isValidHex(newValue[newValue.length - 1])) onChange(newValue);
     }
 
     const onColorPickChange = (newColor) => {
-        setColor(newColor.hex);
+        onChange(newColor.hex);
     }
 
     const isValidHex = (str) => {
