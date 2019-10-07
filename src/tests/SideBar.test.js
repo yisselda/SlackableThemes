@@ -3,12 +3,12 @@ import { shallow } from 'enzyme';
 import Enzyme from 'enzyme';
 import SideBar from '../components/SideBar';
 
-describe("SideBar", () => {
+describe('SideBar', () => {
   let wrapper;
 
-  const channels = ["general", "react"]
-  const messages = ['yisselda', 'terrance', 'christine']
-  const apps = ['Install Google Drive']
+  const channels = ['front-end-set-up','general', 'react']
+  const messages = ['Slackbot','yisselda', 'terrance', 'christine']
+  const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
   beforeEach(() => {
     wrapper = shallow(<SideBar channels={channels} />);
@@ -19,11 +19,11 @@ describe("SideBar", () => {
   })
 
   it('renders a company of SlackableThemes', () => {
-    expect(wrapper.find('h1').text()).toBe('SlackableThemes');
+    expect(wrapper.find('h1.company-name').text()).toBe('SlackableThemes');
   })
 
   it('renders a user of Yisselda', () => {
-    expect(wrapper.find('p').text()).toBe('Yisselda');
+    expect(wrapper.find('p.username').text()).toBe('Yisselda');
   })
 
   it('renders a channel section', () => {
@@ -39,5 +39,9 @@ describe("SideBar", () => {
   it('renders an Apps section', () => {
     expect(wrapper.find('h2.apps').text()).toBe('Apps');
     expect(wrapper.find('ul.apps-list').children()).toHaveLength(apps.length);
+  })
+
+  it('renders an invite option', () => {
+    expect(wrapper.find('p.invite-people').text()).toBe('+ Invite people');
   })
 })

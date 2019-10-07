@@ -2,14 +2,14 @@ import React from 'react'
 import '../styles/sidebar.scss'
 
 const SideBar = () => {
-  const channels = ['general', 'random']
-  const messages = ['yisselda', 'terrance', 'christine']
-  const apps = ['Install Google Drive']
+  const channels = ['front-end-set-up','general', 'react']
+  const messages = ['Slackbot','yisselda', 'terrance', 'christine']
+  const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
   return (
   <div className='sidebar'>
-    <h1>SlackableThemes</h1>
-    <p>Yisselda</p>
+    <h1 className='company-name'>SlackableThemes</h1>
+    <p className='username'>Yisselda</p>
     <h2 className='channels'>Channels</h2>
     <ul className='channels-list'>
       {channels.map((channel) => <li key={channel}># {channel}</li>)}
@@ -18,9 +18,10 @@ const SideBar = () => {
     <ul className='messages-list'>
       {messages.map((message) => <li key={message}># {message}</li>)}
     </ul>
+    <p className='invite-people'>+ Invite people</p>
     <h2 className='apps'>Apps</h2>
     <ul className='apps-list'>
-      {apps.map((app) => <li key={app}># {app}</li>)}
+      {apps.map((app) => <li key={app}>+ {app}</li>)}
     </ul>
   </div>
   )
