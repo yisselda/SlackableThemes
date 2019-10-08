@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/dashboard.scss';
 import PresetThemes from './PresetThemes';
 import ImageUpload from './ImageUpload';
-import ColorPickers from './ColorPickers';
+import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
 
 const DashBoard = () => {
@@ -10,7 +10,7 @@ const DashBoard = () => {
     <div className='dashboard'>
       <PresetThemes />
       <ImageUpload />
-      <ColorPickers />
+      <ColorPicker />
       <ColorInput />
     </div>
   );

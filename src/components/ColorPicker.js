@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChromePicker } from 'react-color';
-import './ColorPicker.css';
+import '../styles/color-picker.scss';
 
 export default function ColorPicker({ label, onChange, color }) {
     let [shouldDisplay, setDisplay] = useState(false);
