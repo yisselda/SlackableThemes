@@ -6,7 +6,7 @@ import SideBar from '../components/SideBar';
 describe('SideBar', () => {
   let wrapper;
 
-  const channels = ['front-end-set-up','general', 'react']
+  const channels = ['front-end-set-up','general', 'random']
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
@@ -24,6 +24,18 @@ describe('SideBar', () => {
 
   it('renders a user of Yisselda', () => {
     expect(wrapper.find('p.username').text()).toBe('Yisselda');
+  })
+
+  it('displays a Threads section', () => {
+    expect(wrapper.find('p.threads').text()).toBe('Threads');
+  })
+
+  it('renders a display only input box', () => {
+    const input = wrapper.find('input');
+    input.value = 'Jump to...';
+    expect(input.value).toEqual('Jump to...');
+    input.simulate("change", {target: { value: 'random'} });
+    expect(input.value).toEqual('Jump to...');
   })
 
   it('renders a channel section', () => {

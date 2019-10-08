@@ -2,7 +2,7 @@ import React from 'react'
 import '../styles/sidebar.scss'
 
 const SideBar = () => {
-  const channels = ['front-end-set-up','general', 'react']
+  const channels = ['front-end-set-up','general', 'random']
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
@@ -10,6 +10,8 @@ const SideBar = () => {
   <div className='sidebar'>
     <h1 className='company-name'>SlackableThemes</h1>
     <p className='username'>Yisselda</p>
+    <input className='find-input' type='text' value='Jump to...' readOnly />
+    <p className='threads'>Threads</p>
     <h2 className='channels'>Channels</h2>
     <ul className='channels-list'>
       {channels.map((channel) => <li key={channel}># {channel}</li>)}
