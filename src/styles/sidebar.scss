@@ -13,6 +13,10 @@ $title-font-size: 1.125rem;
   font-weight: bold;
 }
 
+@mixin right-float {
+  float: right;
+}
+
 .sidebar {
   background-color: $purple;
   color: #fff;
@@ -31,11 +35,12 @@ $title-font-size: 1.125rem;
 }
 
 .find-input {
-  width: 100px;
+  width: 125px;
   border-radius: 4px;
   padding: 7.5px;
   border: none;
   font-size: $user-font-size;
+  margin-right: 10px;
 }
 
 .threads, .invite-people {
@@ -61,4 +66,23 @@ ul {
   li:last-child {
     margin-bottom: 25px;
   }
+}
+
+.bell-icon {
+  font-size: 1.25rem;
+}
+
+.down-icon {
+  font-size: 0.75rem;
+}
+
+.plus-icon, .bell-icon {
+  @include right-float();
+}
+
+.right-icon, .left-icon {
+  font-size: 2.30rem;
+  position: relative;
+  bottom: 2.5px;
+  @include right-float();
 }

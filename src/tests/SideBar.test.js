@@ -11,7 +11,7 @@ describe('SideBar', () => {
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
   beforeEach(() => {
-    wrapper = shallow(<SideBar channels={channels} />);
+    wrapper = shallow(<SideBar />);
   })
   
   it('render a <div>', () => {
@@ -19,15 +19,15 @@ describe('SideBar', () => {
   })
 
   it('renders a company of SlackableThemes', () => {
-    expect(wrapper.find('h1.company-name').text()).toBe('SlackableThemes');
+    expect(wrapper.find('h1.company-name').text()).toMatch(/SlackableThemes/);
   })
 
   it('renders a user of Yisselda', () => {
-    expect(wrapper.find('p.username').text()).toBe('Yisselda');
+    expect(wrapper.find('p.username').text()).toBe('● Yisselda');
   })
 
   it('displays a Threads section', () => {
-    expect(wrapper.find('p.threads').text()).toBe('Threads');
+    expect(wrapper.find('p.threads').text()).toMatch(/Threads/);
   })
 
   it('renders a display only input box', () => {
