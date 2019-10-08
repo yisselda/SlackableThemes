@@ -2,7 +2,7 @@
 
 This project is just starting out. We are basically rebuilding the Slack interface.
 It's perfect if you're looking into do some creative coding!
-We are using React and Sass.
+We are using React and Sass and testing with Jest and Enzyme.
 
 - Check out the README pages on this repo
 - Search for existing GitHub issues
@@ -15,6 +15,7 @@ We are using React and Sass.
    build.
 2. Update the README.md with details of changes to the interface, this includes new environment 
    variables, exposed ports, useful file locations and container parameters.
+3. Ensure all tests are passing and keep your branch up to date with the develop branch.
 
 ## Code of Conduct
 
