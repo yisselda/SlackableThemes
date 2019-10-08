@@ -1,7 +1,64 @@
 @import 'colors';
 
+$default-font-size: 0.9375rem;
+$user-font-size: 0.875rem;
+$title-font-size: 1.125rem;
+
+@mixin remove-margin-and-padding {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin bold-font {
+  font-weight: bold;
+}
+
 .sidebar {
   background-color: $purple;
   color: #fff;
   padding: 16px;
+  font-size: $default-font-size;
+  max-width: 220px;
+}
+
+.company-name {
+  font-size: $title-font-size;
+}
+
+.username {
+  font-size: $user-font-size;
+  margin-top: 5px;
+}
+
+.find-input {
+  width: 100px;
+  border-radius: 4px;
+  padding: 7.5px;
+  border: none;
+  font-size: $user-font-size;
+}
+
+.threads, .invite-people {
+  margin: 25px 0 25px 0;
+}
+
+h2 {
+  font-size: $default-font-size;
+  margin-bottom: 5px;
+  @include bold-font;
+}
+
+h1 {
+  @include remove-margin-and-padding();
+  @include bold-font();
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.55;
+  @include remove-margin-and-padding();
+
+  li:last-child {
+    margin-bottom: 25px;
+  }
 }
