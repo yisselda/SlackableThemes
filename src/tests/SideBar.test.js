@@ -39,7 +39,7 @@ describe('SideBar', () => {
   })
 
   it('displays a Threads section', () => {
-    expect(wrapper.find('p.threads').text()).toBe('Threads');
+    expect(wrapper.find('p.threads').text()).toMatch(/Threads/);
   })
 
   it('renders a display only input box', () => {
