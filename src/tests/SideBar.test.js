@@ -38,6 +38,18 @@ describe('SideBar', () => {
     expect(input.value).toEqual('Jump to...');
   })
 
+  it('displays a Threads section', () => {
+    expect(wrapper.find('p.threads').text()).toBe('Threads');
+  })
+
+  it('renders a display only input box', () => {
+    const input = wrapper.find('input');
+    input.value = 'Jump to...';
+    expect(input.value).toEqual('Jump to...');
+    input.simulate("change", {target: { value: 'random'} });
+    expect(input.value).toEqual('Jump to...');
+  })
+
   it('renders a channel section', () => {
     expect(wrapper.find('h2.channels').text()).toBe('Channels');
     expect(wrapper.find('ul.channels-list').children()).toHaveLength(channels.length);

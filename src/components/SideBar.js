@@ -5,7 +5,7 @@ import { faBell as farBell } from '@fortawesome/fontawesome-free-regular'
 import { faPlusCircle, faCommentDots, faChevronDown, faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons'
 
 const SideBar = () => {
-  const channels = ['front-end-set-up','general', 'react']
+  const channels = ['front-end-set-up','general', 'random']
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
