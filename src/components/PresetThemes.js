@@ -3,16 +3,15 @@ import '../styles/PresetThemes.scss';
 
 export default function PresetThemes(props) {
     const handleClick = () => {
-        var newThemeColors = props.themeColors;
-        return props.setThemeColors(newThemeColors);
+        props.setPresetThemeColors(props.themeColors);
     }
     return (
         <label className="theme-label">
-            <span className="theme-button">
+            <span className="theme-button"> 
                 <input 
+                    type="radio" 
                     className="input-radio"
                     name="sidebar-theme"
-                    type="radio" 
                     onClick={handleClick}
                 />
             </span>
