@@ -3,13 +3,13 @@ import { ChromePicker } from 'react-color';
 import '../styles/color-picker.scss';
 
 export default function ColorPicker({ label, onChange, color }) {
-    let [shouldDisplay, setDisplay] = useState(false);
+    let [shouldDisplay, setDisplay] = useState(false); 
 
     const onColorChange = (e) => {
         const newValue = e.target.value;
-        if (newValue.length > 7) return;
+        if (color[0] !== "#") onChange('#' + newValue);
         if (newValue.length <= 1) { onChange('#'); return; };
-        if (isValidHex(newValue[newValue.length - 1])) onChange(newValue);
+        if (isValidHex(newValue)) onChange(newValue);
     }
 
     const onColorPickChange = (newColor) => {
@@ -17,7 +17,9 @@ export default function ColorPicker({ label, onChange, color }) {
     }
 
     const isValidHex = (str) => {
-        return !!str.match(/[A-F|a-f|0-9]/g);
+        let result = str.match(/[A-F|a-f|0-9]/g);
+        if (!result) return false;
+        return result.length + 1 === str.length;
     }
 
     const handleDisplay = () => {
