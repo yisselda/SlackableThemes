@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChromePicker } from 'react-color';
 import '../styles/color-picker.scss';
 
@@ -7,7 +7,6 @@ export default function ColorPicker({ label, onChange, color }) {
 
     const onColorChange = (e) => {
         const newValue = e.target.value;
-        if (color[0] !== "#") onChange('#' + newValue);
         if (newValue.length <= 1) { onChange('#'); return; };
         if (isValidHex(newValue)) onChange(newValue);
     }
@@ -25,6 +24,10 @@ export default function ColorPicker({ label, onChange, color }) {
     const handleDisplay = () => {
         setDisplay(!shouldDisplay)
     }
+
+    useEffect(() => {
+        if (color[0] !== "#") onChange('#' + color);
+    }, [])
 
     return <div className="container">
         <span className="label">{label}</span>
