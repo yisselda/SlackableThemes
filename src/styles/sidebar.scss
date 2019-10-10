@@ -86,3 +86,7 @@ ul {
   bottom: 2.5px;
   @include right-float();
 }
+
+.right-icon {
+  color: lighten(black, 75%);
+}
