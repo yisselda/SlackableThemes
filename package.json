@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-named-asset-import": "^0.3.4",
-    "babel-preset-react-app": "^9.0.2",
+    "babel-preset-react-app": "^7.0.0",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "css-loader": "2.1.1",
@@ -91,7 +96,9 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
-    "setupFilesAfterEnv": ["./src/setupTests.js"],
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
