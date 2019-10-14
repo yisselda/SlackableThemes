@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 
 const aubergine = {
   columnBg: "#3F0E40",
-  // menuBgHover: "#350D36",
-  menuBgHover: "#ED9511",
-  activeItem: "#1164A3",
+  menuBgHover: "#350D36",
+  // activeItem: "#1164A3",
+  activeItem: '#F70A0A',
   activeItemText: "#FFFFFF",
   hoverItem: "#350D36",
   textColor: "#FFFFFF",
