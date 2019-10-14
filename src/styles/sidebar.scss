@@ -20,9 +20,7 @@ $title-font-size: 1.125rem;
 .sidebar {
   background-color: $purple;
   color: #fff;
-  padding: 16px;
   font-size: $default-font-size;
-  max-width: 220px;
 }
 
 .company-name {
@@ -31,7 +29,7 @@ $title-font-size: 1.125rem;
 
 .username {
   font-size: $user-font-size;
-  margin-top: 5px;
+  margin: 5px 0px 0px 0px;
 }
 
 .find-input {
@@ -89,4 +87,8 @@ ul {
 
 .right-icon {
   color: lighten(black, 75%);
+}
+
+.sidebar-menu, .sidebar-nav {
+  padding: 16px;
 }

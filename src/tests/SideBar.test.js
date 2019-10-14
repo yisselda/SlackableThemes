@@ -9,8 +9,19 @@ describe('SideBar', () => {
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
+  const aubergine = {
+    columnBg: "#3F0E40",
+    menuBgHover: "#350D36",
+    activeItem: "#1164A3",
+    activeItemText: "#FFFFFF",
+    hoverItem: "#350D36",
+    textColor: "#FFFFFF",
+    activePresence: "#2BAC76",
+    mentionBadge: "#CD2553",
+  }
+
   beforeEach(() => {
-    wrapper = shallow(<SideBar />);
+    wrapper = shallow(<SideBar theme={aubergine}/>);
   })
   
   it('render a <div>', () => {

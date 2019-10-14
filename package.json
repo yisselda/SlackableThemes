@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@emotion/core": "^10.0.21",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
@@ -20,6 +21,7 @@
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "5.1.0",
+    "emotion": "^10.0.17",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint-config-react-app": "^5.0.2",
@@ -66,7 +68,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "test": "jest --watchAll",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

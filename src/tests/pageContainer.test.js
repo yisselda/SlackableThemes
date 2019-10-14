@@ -27,4 +27,9 @@ describe("PageContainer", () => {
     expect(wrapper.childAt(0).type()).toBe(SideBar)
     expect(wrapper.childAt(1).type()).toBe(DashBoard)
   })
+
+  it('passes the theme prop to SideBar', () => {
+    wrapper = mount(<PageContainer />);
+    expect(wrapper.prop('theme')).toEqual(aubergine);
+  })
 })
