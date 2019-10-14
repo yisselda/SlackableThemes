@@ -41,7 +41,7 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
     <div className='sidebar-nav'>
       <input className='find-input' type='text' value='Jump to...' readOnly style={{ color: textColor }} />
 
-      <p className='threads'><FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> Threads</p>
+      <p className='threads' css={ hoverBackground }><FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> Threads</p>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
       <h2 className='channels'>Channels</h2>
@@ -55,12 +55,12 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
         {messages.map((message) => <li key={message} css={ hoverBackground }><a href='#' css={ activeBackground }><span className='active-status' style={{ color: activePresence }}>●</span> {message}</a></li>)}
       </ul>
 
-      <p className='invite-people'>+ Invite people</p>
+      <p className='invite-people' css={ hoverBackground }>+ Invite people</p>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
       <h2 className='apps'>Apps</h2>
       <ul className='apps-list'>
-        {apps.map((app) => <li key={app} css={ hoverBackground }>+ {app}</li>)}
+        {apps.map((app) => <li key={app} css={ hoverBackground }><a href='#'>+ {app}</a></li>)}
       </ul>
     </div>
   </div>
