@@ -39,6 +39,10 @@ $title-font-size: 1.125rem;
   border: none;
   font-size: $user-font-size;
   margin-right: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .threads, .invite-people {

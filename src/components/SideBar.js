@@ -26,6 +26,12 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
     }
   })
 
+  const hoverBoldText = () => css({
+    '&:hover': {
+      opacity: 100
+    }
+  })
+
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
     <div className='sidebar-menu' css={{
@@ -35,7 +41,7 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
     }}>
       <FontAwesomeIcon className='bell-icon' icon={['far', 'bell']} />
       <h1 className='company-name'>SlackableThemes <FontAwesomeIcon className='down-icon' icon={faChevronDown} /> </h1>
-      <p className='username'><span className='active-status' style={{ color: activePresence }}>●</span> Yisselda</p>
+      <p className='username'><span className='active-status' style={{ color: activePresence }} >●</span> Yisselda</p>
     </div>
 
     <div className='sidebar-nav'>
@@ -44,13 +50,13 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
       <p className='threads' css={ hoverBackground }><FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> Threads</p>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
-      <h2 className='channels'>Channels</h2>
+      <h2 className='channels' css={ hoverBoldText }>Channels</h2>
       <ul className='channels-list' >
         {channels.map((channel) => <li key={channel} css={ hoverBackground }><a href='#' css={ activeBackground }># {channel}</a></li>)}
       </ul>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
-      <h2 className='direct-messages'>Direct Messages</h2>
+      <h2 className='direct-messages' css={ hoverBoldText }>Direct Messages</h2>
       <ul className='messages-list'>
         {messages.map((message) => <li key={message} css={ hoverBackground }><a href='#' css={ activeBackground }><span className='active-status' style={{ color: activePresence }}>●</span> {message}</a></li>)}
       </ul>
@@ -58,7 +64,7 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
       <p className='invite-people' css={ hoverBackground }>+ Invite people</p>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
-      <h2 className='apps'>Apps</h2>
+      <h2 className='apps' css={ hoverBoldText }>Apps</h2>
       <ul className='apps-list'>
         {apps.map((app) => <li key={app} css={ hoverBackground }><a href='#'>+ {app}</a></li>)}
       </ul>
