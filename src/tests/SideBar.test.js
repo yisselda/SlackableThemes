@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import SideBar from '../components/SideBar';
-import sinon from 'sinon';
 import renderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
 import styled from '@emotion/styled';
