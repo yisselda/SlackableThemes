@@ -11,8 +11,6 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
 
-  const [active, setActive] = useState(false);
-
   const hoverBackground = () => css({
     '&:hover': {
       backgroundColor: hoverItem
@@ -52,13 +50,13 @@ const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
       <h2 className='channels' css={ hoverBoldText }>Channels</h2>
       <ul className='channels-list' >
-        {channels.map((channel) => <li key={channel} css={ hoverBackground }><a href='#' css={ activeBackground }># {channel}</a></li>)}
+        {channels.map((channel) => <li key={channel} css={ hoverBackground }><a  href='#' className={channel} css={ activeBackground }># {channel}</a></li>)}
       </ul>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
       <h2 className='direct-messages' css={ hoverBoldText }>Direct Messages</h2>
       <ul className='messages-list'>
-        {messages.map((message) => <li key={message} css={ hoverBackground }><a href='#' css={ activeBackground }><span className='active-status' style={{ color: activePresence }}>●</span> {message}</a></li>)}
+        {messages.map((message) => <li key={message} css={ hoverBackground }><a href='#' className={message} css={ activeBackground }><span className='active-status' style={{ color: activePresence }}>●</span> {message}</a></li>)}
       </ul>
 
       <p className='invite-people' css={ hoverBackground }>+ Invite people</p>
