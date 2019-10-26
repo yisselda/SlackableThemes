@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@babel/runtime": "^7.6.3",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
