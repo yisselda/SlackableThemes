@@ -6,10 +6,11 @@ import { faBell as farBell } from '@fortawesome/fontawesome-free-regular';
 import { faPlusCircle, faCommentDots, faChevronDown, faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
 import { jsx, css } from '@emotion/core';
 
-const SideBar = ({ theme : { columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge }}) => {
+const SideBar = ({ theme }) => {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
 
   const hoverBackground = () => css({
     '&:hover': {

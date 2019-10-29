@@ -4,6 +4,7 @@ import SideBar from '../components/SideBar';
 import renderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
 import styled from '@emotion/styled';
+import presetThemes from "../data/preset-themes";
 
 expect.extend(matchers)
 
@@ -14,16 +15,8 @@ describe('SideBar', () => {
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
-  const aubergine = {
-    columnBg: "#3F0E40",
-    menuBgHover: "#350D36",
-    activeItem: "#1164A3",
-    activeItemText: "#FFFFFF",
-    hoverItem: "#350D36",
-    textColor: "#FFFFFF",
-    activePresence: "#2BAC76",
-    mentionBadge: "#CD2553",
-  }
+  const aubergine = presetThemes[0].themeColor;
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
 
   beforeEach(() => {
     wrapper = shallow(<SideBar theme={aubergine}/>);
@@ -74,30 +67,35 @@ describe('SideBar', () => {
 
   describe('renders sidebar styles properly', () => {
     it('renders a sidebar with a background of columnBg', () => {
-      expect(wrapper.find('.sidebar').prop('style')).toHaveProperty('backgroundColor', aubergine.columnBg);
+      expect(wrapper.find('.sidebar').prop('style')).toHaveProperty('backgroundColor', columnBg);
     })
 
     it('renders a sidebar with a text color of textColor', () => {
-      expect(wrapper.find('.sidebar').prop('style')).toHaveProperty('color', aubergine.textColor);
+      expect(wrapper.find('.sidebar').prop('style')).toHaveProperty('color', textColor);
     })
 
     it('renders a span with a color of activePresence', () => {
       wrapper.find('.active-status').forEach((node) => {
-        expect(node.prop('style')).toHaveProperty('color', aubergine.activePresence);
+        expect(node.prop('style')).toHaveProperty('color', activePresence);
       })
+    })
+
+    it('highlights the top menu div on hover', () => {
+      wrapper = mount(<SideBar theme={aubergine}/>);
+      expect(wrapper.find('.sidebar-menu')).toHaveStyleRule('background-color', menuBgHover, { target: ':hover'});
     })
 
     it('highlights p tags on focus', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.invite-people')).toHaveStyleRule('background-color', aubergine.hoverItem, { target: ':hover'});
-      expect(wrapper.find('.threads')).toHaveStyleRule('background-color', aubergine.hoverItem, { target: ':hover'});
+      expect(wrapper.find('.invite-people')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
+      expect(wrapper.find('.threads')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
     })
 
     it('highlights line items on focus', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.channels-list').children()).toHaveStyleRule('background-color', aubergine.hoverItem, { target: ':hover'});
-      expect(wrapper.find('.messages-list').children()).toHaveStyleRule('background-color', aubergine.hoverItem, { target: ':hover'});
-      expect(wrapper.find('.apps-list').children()).toHaveStyleRule('background-color', aubergine.hoverItem, { target: ':hover'});
+      expect(wrapper.find('.channels-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
+      expect(wrapper.find('.messages-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
+      expect(wrapper.find('.apps-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
     })
 
     it('boldens h2 text on hover', () => {
@@ -110,13 +108,13 @@ describe('SideBar', () => {
     it('highlights the active item on focus', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
       const item = wrapper.find(`.${channels[0]}`);
-      expect(item).toHaveStyleRule('background-color', aubergine.activeItem, { target: ':focus'});
-      expect(item).toHaveStyleRule('color', aubergine.activeItemText, { target: ':focus'});
+      expect(item).toHaveStyleRule('background-color', activeItem, { target: ':focus'});
+      expect(item).toHaveStyleRule('color', activeItemText, { target: ':focus'});
       const item2 = wrapper.find(`.${messages[0]}`);
-      expect(item2).toHaveStyleRule('background-color', aubergine.activeItem, { target: ':focus'});
-      expect(item2).toHaveStyleRule('color', aubergine.activeItemText, { target: ':focus'});
-      expect(item).not.toHaveStyleRule('background-color', aubergine.activeItem);
-      expect(item).not.toHaveStyleRule('color', aubergine.activeItemText);
+      expect(item2).toHaveStyleRule('background-color', activeItem, { target: ':focus'});
+      expect(item2).toHaveStyleRule('color', activeItemText, { target: ':focus'});
+      expect(item).not.toHaveStyleRule('background-color', activeItem);
+      expect(item).not.toHaveStyleRule('color', activeItemText);
     })
   })
 })

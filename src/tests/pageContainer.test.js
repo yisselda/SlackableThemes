@@ -3,20 +3,12 @@ import { shallow, mount } from 'enzyme'
 import PageContainer from '../containers/PageContainer'
 import SideBar from '../components/SideBar'
 import DashBoard from '../components/DashBoard'
+import presetThemes from "../data/preset-themes";
 
 describe("PageContainer", () => {
   let wrapper;
 
-  const aubergine = {
-    columnBg: "#3F0E40",
-    menuBgHover: "#350D36",
-    activeItem: "#1164A3",
-    activeItemText: "#FFFFFF",
-    hoverItem: "#350D36",
-    textColor: "#FFFFFF",
-    activePresence: "#2BAC76",
-    mentionBadge: "#CD2553",
-  }
+  const aubergine = presetThemes[0].themeColor;
 
   it('render a <div>', () => {
     wrapper = shallow(<PageContainer theme={aubergine} />)
