@@ -20,9 +20,7 @@ $title-font-size: 1.125rem;
 .sidebar {
   background-color: $purple;
   color: #fff;
-  padding: 16px;
   font-size: $default-font-size;
-  max-width: 220px;
 }
 
 .company-name {
@@ -31,20 +29,28 @@ $title-font-size: 1.125rem;
 
 .username {
   font-size: $user-font-size;
-  margin-top: 5px;
+  margin: 5px 0px 0px 0px;
 }
 
 .find-input {
-  width: 125px;
+  width: 92.5%;
   border-radius: 4px;
   padding: 7.5px;
   border: none;
   font-size: $user-font-size;
   margin-right: 10px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .threads, .invite-people {
   margin: 25px 0 25px 0;
+}
+
+input {
+  background-color: rgba(255,255,255,0.15);
 }
 
 h2 {
@@ -80,9 +86,20 @@ ul {
   @include right-float();
 }
 
-.right-icon, .left-icon {
-  font-size: 2.30rem;
-  position: relative;
-  bottom: 2.5px;
-  @include right-float();
+.sidebar-menu, .sidebar-nav {
+  padding: 16px;
+}
+
+.sidebar-nav {
+  padding-top: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+h2, a, p, .plus-icon, .bell-icon, .down-icon {
+  opacity: 0.75;
 }
