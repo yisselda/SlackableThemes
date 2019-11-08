@@ -25,12 +25,17 @@ const DashBoard = props => {
 
   function onColorChange(newColor) {
     setColor(newColor);
+    var newTheme = props.theme;
+    newTheme[0] = newColor;
+    console.log(`DashBoard onColorChange ${newTheme}`)
+    props.setTheme(newTheme);
   }
 
   return (
     <div className='dashboard'>
       {renderThemes(themes)}
       <ImageUpload />
+      <ColorPicker color={color} onChange={onColorChange} />
       <ColorPicker color={color} onChange={onColorChange} />
       <ColorInput />
     </div>

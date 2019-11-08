@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell as farBell } from '@fortawesome/fontawesome-free-regular';
@@ -10,8 +10,15 @@ const SideBar = ({ theme }) => {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
+  const [value, setValue] = useState(theme);
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = value;
 
+  useEffect(() => {
+    console.log(`sidebar theme prop: ${value}`)
+  }, [])
+
+  useEffect(() => { setValue(theme) }, [theme]);
+  
   const hoverBackground = () => css({
     '&:hover': {
       backgroundColor: hoverItem
