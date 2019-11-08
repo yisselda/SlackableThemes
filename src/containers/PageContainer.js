@@ -7,24 +7,21 @@ import '../styles/page-container.scss';
 import PropTypes from 'prop-types';
 
 const PageContainer = () => {
-  
-  // const theme = presetThemes[0].themeColor;
-    
-  // const setBackground = (color) => {
-  //     console.log(theme);
-  //     theme[0] = color;
-  //     console.log(theme);
-  // }
-
   const [theme, setTheme] = useState(presetThemes[0].themeColor);
 
-  const updateTheme = (theme) => {
-    setTheme(theme);
-    console.log(theme);
+  useEffect(() => {
+    console.log(`PageContainer ${theme}`)
+  });
+
+  const updateTheme = (t) => {
+    setTheme([...t]);
+    console.log("Target: ", t);
+    console.log("ThemFr: ", theme)
   }
 
   return (
     <div className='page-container'>
+      { console.log("Theme in render: ",theme)}
       <SideBar theme={theme} />
       <DashBoard setTheme={updateTheme} theme={theme}/>
     </div>

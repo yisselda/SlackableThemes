@@ -10,14 +10,6 @@ const SideBar = ({ theme }) => {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
-  const [value, setValue] = useState(theme);
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = value;
-
-  useEffect(() => {
-    console.log(`sidebar theme prop: ${value}`)
-  }, [])
-
-  useEffect(() => { setValue(theme) }, [theme]);
   
   const hoverBackground = () => css({
     '&:hover': {
@@ -38,6 +30,9 @@ const SideBar = ({ theme }) => {
     }
   })
 
+  console.log("THEME IN SIDEBAR", theme)
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
+  
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
     <div className='sidebar-menu' css={{
