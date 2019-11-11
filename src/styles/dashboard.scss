@@ -1,3 +1,8 @@
 .dashboard {
   padding: 16px;
 }
+
+.color-picker-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
