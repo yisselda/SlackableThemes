@@ -10,7 +10,7 @@ const DashBoard = props => {
   let [color, setColor] = useState('#00ffff');
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
   const [presetThemeColors, setPresetThemeColors] = useState(themes[0].themeColor);
-  var renderThemes = (theme) => {
+  let renderThemes = (theme) => {
     return theme.map(t => (
         <PresetThemes 
           key={t.id}
@@ -27,7 +27,6 @@ const DashBoard = props => {
     setColor(newColor);
     var newTheme = props.theme;
     newTheme[0] = newColor;
-    console.log(`DashBoard onColorChange ${newTheme}`)
     props.setTheme(newTheme);
   }
 
