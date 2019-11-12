@@ -35,6 +35,7 @@ const DashBoard = props => {
 
   return (
     <div className='dashboard'>
+      <h2 className="default-theme-title">Default Sidebar Themes</h2>
       {renderThemes(themes)}
       <ImageUpload />
       <h2 className='colorpickers-title'>Custom Theme</h2>

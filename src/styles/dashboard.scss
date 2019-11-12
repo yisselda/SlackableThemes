@@ -2,7 +2,9 @@
   padding: 16px;
 }
 
-.color-picker-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+h2.colorpickers-title, h2.default-theme-title {
+  opacity: 1;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold
 }

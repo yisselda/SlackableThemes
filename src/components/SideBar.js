@@ -30,7 +30,6 @@ const SideBar = ({ theme }) => {
     }
   })
 
-  console.log("THEME IN SIDEBAR", theme)
   const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
   
   return (
