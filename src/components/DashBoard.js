@@ -11,8 +11,8 @@ const DashBoard = props => {
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
   const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
   const [ color, setColor ] = useState('#00ffff');
+  // const [presetThemeColors, setPresetThemeColors] = useState(props.theme);
 
-  const [presetThemeColors, setPresetThemeColors] = useState(themes[0].themeColor);
   let renderThemes = (theme) => {
     return theme.map(t => (
         <PresetThemes 
@@ -20,7 +20,7 @@ const DashBoard = props => {
           theme={t.theme}
           image={t.image}
           themeColors={t.themeColor}
-          setPresetThemeColors={setPresetThemeColors}
+          updateThemeColors={props.setTheme}
         />
       )
     )
