@@ -37,15 +37,16 @@ const DashBoard = props => {
     <div className='dashboard'>
       {renderThemes(themes)}
       <ImageUpload />
+      <h2 className='colorpickers-title'>Custom Theme</h2>
       <div className="colorpickers-container">
-        <ColorPicker color={columnBg} onChange={(newColor, position, e) => onColorChange(newColor, 0, e)} />
-        <ColorPicker color={menuBgHover} onChange={(newColor, position, e) => onColorChange(newColor, 1, e)}/>
-        <ColorPicker color={activeItem} onChange={(newColor, position, e) => onColorChange(newColor, 2, e)}/>
-        <ColorPicker color={activeItemText} onChange={(newColor, position, e) => onColorChange(newColor, 3, e)}/>
-        <ColorPicker color={hoverItem} onChange={(newColor, position, e) => onColorChange(newColor, 4, e)}/>
-        <ColorPicker color={textColor} onChange={(newColor, position, e) => onColorChange(newColor, 5, e)}/>
-        <ColorPicker color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
-        <ColorPicker color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 7, e)}/>
+        <ColorPicker label="Column BG" color={columnBg} onChange={(newColor, position, e) => onColorChange(newColor, 0, e)}/>
+        <ColorPicker label="Menu BG Hover" color={menuBgHover} onChange={(newColor, position, e) => onColorChange(newColor, 1, e)}/>
+        <ColorPicker label="Active Item" color={activeItem} onChange={(newColor, position, e) => onColorChange(newColor, 2, e)}/>
+        <ColorPicker label="Active Item Text" color={activeItemText} onChange={(newColor, position, e) => onColorChange(newColor, 3, e)}/>
+        <ColorPicker label="Hover Item" color={hoverItem} onChange={(newColor, position, e) => onColorChange(newColor, 4, e)}/>
+        <ColorPicker label="Text Color" color={textColor} onChange={(newColor, position, e) => onColorChange(newColor, 5, e)}/>
+        <ColorPicker label="Active Presence" color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
+        <ColorPicker label="Mention Badge" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 7, e)}/>
       </div>
       <ColorInput />
     </div>
