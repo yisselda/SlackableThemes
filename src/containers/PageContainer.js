@@ -14,7 +14,7 @@ const PageContainer = () => {
 
   return (
     <div className='page-container'>
-      { console.log("Theme in render: ",theme)}
+      { console.log("Theme in render: ", theme) }
       <SideBar theme={theme} />
       <DashBoard setTheme={updateTheme} theme={theme}/>
     </div>
