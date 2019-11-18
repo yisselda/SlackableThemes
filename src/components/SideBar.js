@@ -10,8 +10,7 @@ const SideBar = ({ theme }) => {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
-
+  
   const hoverBackground = () => css({
     '&:hover': {
       backgroundColor: hoverItem
@@ -31,6 +30,8 @@ const SideBar = ({ theme }) => {
     }
   })
 
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
+  
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
     <div className='sidebar-menu' css={{

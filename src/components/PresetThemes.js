@@ -3,7 +3,7 @@ import '../styles/preset-themes.scss'
 
 export default function PresetThemes(props) {
     const handleClick = () => {
-        props.setPresetThemeColors(props.themeColors);
+        props.updateThemeColors(props.themeColors);
     }
     return (
         <label className="theme-label">
