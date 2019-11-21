@@ -1,0 +1,5 @@
+@import "dashboard.scss";
+
+.color-input-title {
+  @include title-style();
+}

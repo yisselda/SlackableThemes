@@ -4,7 +4,6 @@ import SideBar from '../components/SideBar';
 import renderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
 import styled from '@emotion/styled';
-import presetThemes from "../data/preset-themes";
 
 expect.extend(matchers)
 
@@ -15,7 +14,17 @@ describe('SideBar', () => {
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps']
 
-  const aubergine = presetThemes[0].themeColor;
+  const aubergine = [
+    '#3F0E40',
+    '#350d36',
+    '#1164A3',
+    '#FFFFFF',
+    '#350D36',
+    '#FFFFFF',
+    '#2BAC76',
+    '#CD2553'
+  ]
+  
   const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
 
   beforeEach(() => {

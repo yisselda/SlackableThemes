@@ -4,7 +4,7 @@ import PresetThemes from './PresetThemes';
 import ImageUpload from './ImageUpload';
 import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
-import presetThemes from '../data/preset-themes'
+import presetThemes from '../data/Themes';
 
 export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
