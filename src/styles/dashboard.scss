@@ -9,6 +9,11 @@
   padding: 16px;
 }
 
-h2.colorpickers-title, h2.default-theme-title {
+h2.colorpickers-title {
+  @include title-style();
+  opacity: 1;
+}
+
+h2.default-theme-title {
   @include title-style();
 }
