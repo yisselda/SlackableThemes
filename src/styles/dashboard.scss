@@ -1,8 +1,7 @@
 @mixin title-style {
   opacity: 1;
-  margin-bottom: 20px;
   font-size: 18px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .dashboard {
@@ -12,8 +11,10 @@
 h2.colorpickers-title {
   @include title-style();
   opacity: 1;
+  margin-bottom: 5px;
 }
 
 h2.default-theme-title {
   @include title-style();
+  margin-bottom: 20px;
 }
