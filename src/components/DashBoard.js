@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/dashboard.scss';
 import PresetThemes from './PresetThemes';
 import ImageUpload from './ImageUpload';
@@ -6,12 +6,9 @@ import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
 import presetThemes from '../data/preset-themes'
 
-const DashBoard = props => {
-  const theme = props.theme;
+export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
   const [ color, setColor ] = useState('#00ffff');
-  // const [presetThemeColors, setPresetThemeColors] = useState(props.theme);
 
   let renderThemes = (theme) => {
     return theme.map(t => (
@@ -20,7 +17,7 @@ const DashBoard = props => {
           theme={t.theme}
           image={t.image}
           themeColors={t.themeColor}
-          updateThemeColors={props.setTheme}
+          updateThemeColors={setTheme}
         />
       )
     )
@@ -30,7 +27,7 @@ const DashBoard = props => {
     setColor(newColor);
     var newTheme = theme;
     newTheme[position] = newColor;
-    props.setTheme(newTheme);
+    setTheme(newTheme);
   }
 
   return (
@@ -52,6 +49,4 @@ const DashBoard = props => {
       <ColorInput />
     </div>
   );
-}
-
-export default DashBoard;
+};
