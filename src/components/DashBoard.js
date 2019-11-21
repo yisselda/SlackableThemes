@@ -46,7 +46,7 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
         <ColorPicker label="Active Presence" color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
         <ColorPicker label="Mention Badge" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 7, e)}/>
       </div>
-      <ColorInput />
+      <ColorInput theme={theme}/>
     </div>
   );
 };
