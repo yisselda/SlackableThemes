@@ -24,4 +24,12 @@ describe('DashBoard', () => {
   it('renders properly', () => {
     expect(wrapper).toBeDefined();
   })
+
+  it('clicking a preset theme will call the onColorChange function', () => {
+    const mockFn = jest.fn();
+    wrapper = mount(<DashBoard theme={aubergine} setTheme={mockFn}/>);
+    const hoth = wrapper.find('[data-theme="Hoth"]');
+    hoth.simulate('click');
+    expect(mockFn).toHaveBeenCalled();
+  })
 });
