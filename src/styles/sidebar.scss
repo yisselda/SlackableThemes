@@ -103,3 +103,21 @@ a {
 h2, a, p, .plus-icon, .bell-icon, .down-icon {
   opacity: 0.75;
 }
+
+.front-end-set-up .channel-name {
+  font-weight: 900;
+}
+
+.mention-badge {
+  visibility: hidden;
+}
+
+.front-end-set-up .mention-badge {
+  float: right;
+  visibility: visible;
+  text-align: center;
+  width: 25px;
+  border-radius: 12.5px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
