@@ -1,11 +1,11 @@
 import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 import Enzyme, { shallow } from 'enzyme';
-import PresetThemes from '../components/PresetThemes';
+import PresetTheme from '../components/PresetTheme';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('PresetThemes', () => {
+describe('PresetTheme', () => {
     let wrapper;
     const defaultProps = {
         theme: 'Aubergine',
@@ -23,7 +23,7 @@ describe('PresetThemes', () => {
     }
 
     beforeEach(() => {
-        wrapper = shallow(<PresetThemes {...defaultProps} />)
+        wrapper = shallow(<PresetTheme {...defaultProps} />)
     })
 
     it('Properly renders', () => {

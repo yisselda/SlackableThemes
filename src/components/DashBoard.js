@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/dashboard.scss';
-import PresetThemes from './PresetThemes';
+import PresetTheme from './PresetTheme';
 import ImageUpload from './ImageUpload';
 import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
@@ -15,7 +15,7 @@ const DashBoard = props => {
 
   let renderThemes = (theme) => {
     return theme.map(t => (
-        <PresetThemes 
+        <PresetTheme 
           key={t.id}
           theme={t.theme}
           image={t.image}
