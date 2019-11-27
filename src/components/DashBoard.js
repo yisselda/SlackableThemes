@@ -32,10 +32,10 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
 
   return (
     <div className='dashboard'>
-      <h2 className="default-theme-title">Default Sidebar Themes</h2>
-      {renderThemes(themes)}
+      <h1 className="slackable-title" style={{color: columnBg}}>Slackable Themes</h1>
+      <h2 className="default-theme-title">Image Upload</h2>
       <ImageUpload />
-      <h2 className='colorpickers-title'>Custom Theme</h2>
+      <h2 className="default-theme-title">Custom Theme</h2>
       <div className="colorpickers-container">
         <ColorPicker label="Column BG" color={columnBg} onChange={(newColor, position, e) => onColorChange(newColor, 0, e)}/>
         <ColorPicker label="Menu BG Hover" color={menuBgHover} onChange={(newColor, position, e) => onColorChange(newColor, 1, e)}/>
@@ -46,7 +46,10 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
         <ColorPicker label="Active Presence" color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
         <ColorPicker label="Mention Badge" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 7, e)}/>
       </div>
+      <h2 className="default-theme-title">Copy and paste these values to share your custom theme with others</h2>
       <ColorInput theme={theme}/>
+      <h2 className="default-theme-title">Sidebar Themes</h2>
+      {renderThemes(themes)}
     </div>
   );
 };

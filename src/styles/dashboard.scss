@@ -9,13 +9,12 @@
   margin: 0 10%
 }
 
-h2.colorpickers-title {
-  @include title-style();
-  opacity: 1;
-  margin-bottom: 5px;
+h1.slackable-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
 }
 
 h2.default-theme-title {
   @include title-style();
-  margin-bottom: 20px;
 }
