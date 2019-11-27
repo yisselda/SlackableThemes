@@ -116,5 +116,11 @@ describe('SideBar', () => {
       expect(item).not.toHaveStyleRule('background-color', activeItem);
       expect(item).not.toHaveStyleRule('color', activeItemText);
     })
+
+    it('displays the mention badge with the mention badge color', () => {
+      wrapper = mount(<SideBar theme={aubergine}/>);
+      const item = wrapper.find(`.${channels[0]} .mention-badge`);
+      expect(item.prop('style')).toHaveProperty('backgroundColor', mentionBadge);
+    })
   })
 })

@@ -1,7 +1,7 @@
 import React from 'react';
-import '../styles/preset-themes.scss'
+import '../styles/preset-theme.scss'
 
-export default function PresetThemes(props) {
+export default function PresetTheme(props) {
     const handleClick = () => {
         props.updateThemeColors(props.themeColors);
     }

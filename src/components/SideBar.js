@@ -52,7 +52,13 @@ const SideBar = ({ theme }) => {
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
       <h2 className='channels' css={ hoverBoldText }>Channels</h2>
       <ul className='channels-list' >
-        {channels.map((channel) => <li key={channel} css={ hoverBackground }><a  href='#' className={channel} css={ activeBackground }># {channel}</a></li>)}
+        {channels.map((channel) => 
+          <li key={channel} css={ hoverBackground }>
+            <a  href='#' className={channel} css={ activeBackground }>
+              # <span className="channel-name">{channel}</span>
+              <span className="mention-badge" style={{ backgroundColor: mentionBadge }}>2</span>
+            </a>
+          </li>)}
       </ul>
 
       <FontAwesomeIcon className='plus-icon' icon={faPlusCircle} />
