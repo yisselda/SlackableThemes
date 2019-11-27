@@ -1,8 +1,27 @@
 import React from 'react';
+import Dropzone from 'react-dropzone';
 import '../styles/image-upload.scss';
 
-const ImageUpload = () => (
-  <div className='image-upload'>Image Upload</div>
-);
+const ImageUpload = (props) => {
+  const onDrop = (acceptedFiles) => {
+    console.log(acceptedFiles);
+  }
+
+  return (
+    <div className="image-upload-container">
+      <h2>Image Upload</h2>
+      <div className="image-upload">
+        <Dropzone onDrop={onDrop}>
+          {({getRootProps, getInputProps}) => (
+            <div {...getRootProps()}>
+              <input {...getInputProps()} />
+              Click me to upload a file!
+            </div>
+          )}
+        </Dropzone>
+      </div>
+    </div>
+  );
+};
 
 export default ImageUpload;
