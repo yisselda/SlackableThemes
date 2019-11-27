@@ -9,7 +9,6 @@ const ImageUpload = (props) => {
 
   return (
     <div className="image-upload-container">
-      <h2>Image Upload</h2>
       <div className="image-upload">
         <Dropzone onDrop={onDrop}>
           {({getRootProps, getInputProps}) => (

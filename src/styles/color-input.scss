@@ -22,6 +22,7 @@
     align-items: center;
     font-size: 15px;
     min-width: 80px;
+    margin: 5px 0;
     padding: 0 12px 1px;
     font-family: $default-font-family;
     @include input-style();

@@ -25,10 +25,6 @@ describe('ColorInput', () => {
     expect(wrapper).toBeDefined();
   })
 
-  it('renders the color input title properly', () => {
-    expect(wrapper.find('.color-input-title').text()).toEqual('Copy and paste these values to share your custom theme with others');
-  })
-
   it('renders the current theme in the input box', () => {
     wrapper = mount(<ColorInput theme={aubergine}/>);
     const input = wrapper.find('.color-input-box');
