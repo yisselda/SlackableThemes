@@ -1,14 +1,16 @@
 import React from 'react';
 import '../styles/preset-theme.scss'
 
-export default function PresetTheme(props) {
+export default function PresetThemes({ theme, image, updateThemeColors, themeColors }) {
     const handleClick = () => {
-        props.updateThemeColors(props.themeColors);
+        updateThemeColors(themeColors);
     }
+
     return (
         <label className="theme-label">
             <span className="theme-button"> 
-                <input 
+                <input
+                    data-theme={theme} 
                     type="radio" 
                     className="input-radio"
                     name="sidebar-theme"
@@ -16,9 +18,9 @@ export default function PresetTheme(props) {
                 />
             </span>
             <span className="theme-text">
-                {props.theme}
+                {theme}
                 <br/>
-                <img className="theme-thumb" src={props.image} alt={props.theme}></img>
+                <img className="theme-thumb" src={image} alt={theme}></img>
             </span>
         </label>
     );

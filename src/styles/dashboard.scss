@@ -1,10 +1,20 @@
+@mixin title-style {
+  opacity: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .dashboard {
   padding: 16px;
 }
 
-h2.colorpickers-title, h2.default-theme-title {
+h2.colorpickers-title {
+  @include title-style();
   opacity: 1;
+  margin-bottom: 5px;
+}
+
+h2.default-theme-title {
+  @include title-style();
   margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: bold
 }

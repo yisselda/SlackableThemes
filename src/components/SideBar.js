@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell as farBell } from '@fortawesome/fontawesome-free-regular';
 import { faPlusCircle, faCommentDots, faChevronDown, faCaretSquareLeft, faCaretSquareRight } from '@fortawesome/free-solid-svg-icons';
 import { jsx, css } from '@emotion/core';
 
-const SideBar = ({ theme }) => {
+export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   const apps = ['Install Giphy', 'Install Simple Poll', 'Add more apps'];
@@ -29,8 +29,6 @@ const SideBar = ({ theme }) => {
       opacity: 100
     }
   })
-
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = theme;
   
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
@@ -77,6 +75,4 @@ const SideBar = ({ theme }) => {
     </div>
   </div>
   )
-}
-
-export default SideBar;
+};
