@@ -1,10 +1,15 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import '../styles/image-upload.scss';
+import ApiCommunicator from '../data/api-communicator';
 
-const ImageUpload = (props) => {
-  const onDrop = (acceptedFiles) => {
-    console.log(acceptedFiles);
+const ImageUpload = ({ updateThemeColors }) => {
+  const onDrop = async acceptedFiles => {
+    let formData = new FormData();
+    formData.append('file', acceptedFiles[0]);
+    const themeJSON = await ApiCommunicator.generateThemeFromFile(formData);
+    const theme = themeJSON.data.split(",")
+    updateThemeColors(theme);
   }
 
   return (

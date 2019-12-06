@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SideBar from '../components/SideBar';
 import DashBoard from '../components/DashBoard';
-import presetThemes from '../data/Themes';
+import presetThemes from '../data/themes';
 import '../styles/page-container.scss';
 import PropTypes from 'prop-types';
 
