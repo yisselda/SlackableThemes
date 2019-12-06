@@ -1,0 +1,32 @@
+@import "dashboard.scss";
+@import "sidebar.scss";
+@import "index.scss";
+
+.color-input {
+  .color-input-title {
+    @include title-style();
+  }
+
+  .color-input-box {
+    max-width: 545px;
+    width: 100%;
+    margin: 0 8px 0 0;
+    border: 1px solid black;
+    font-family: $default-font-family;
+    @include input-style();
+  }
+
+  .copy-button {
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    font-size: 15px;
+    min-width: 80px;
+    margin: 5px 0;
+    padding: 0 12px 1px;
+    font-family: $default-font-family;
+    @include input-style();
+  }
+}
+
+

@@ -1,0 +1,20 @@
+@mixin title-style {
+  opacity: 1;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dashboard {
+  padding: 16px;
+  margin: 0 10%
+}
+
+h1.slackable-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h2.default-theme-title {
+  @include title-style();
+}

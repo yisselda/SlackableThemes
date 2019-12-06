@@ -1,0 +1,138 @@
+@import 'colors';
+
+$default-font-size: 0.9375rem;
+$user-font-size: 0.875rem;
+$title-font-size: 1.125rem;
+
+@mixin remove-margin-and-padding {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin bold-font {
+  font-weight: bold;
+}
+
+@mixin right-float {
+  float: right;
+}
+
+@mixin partial-opacity {
+  opacity: 0.75;
+}
+
+@mixin input-style {
+  border-radius: 4px;
+  padding: 7.5px;
+  font-size: $user-font-size;
+  margin-right: 10px;
+}
+
+.sidebar {
+  background-color: $purple;
+  color: #fff;
+  font-size: $default-font-size;
+
+  .sidebar-menu {
+    padding: 16px;
+
+    .company-name {
+      font-size: $title-font-size;
+    }
+    
+    .username {
+      font-size: $user-font-size;
+      margin: 5px 0px 0px 0px;
+    }
+
+    .bell-icon {
+      font-size: 1.25rem;
+      @include right-float();
+      @include partial-opacity();
+    }
+    
+    .down-icon {
+      font-size: 0.75rem;
+      @include partial-opacity();
+    }
+  }
+
+  .sidebar-nav {
+    padding: 16px;
+
+    .find-input {
+      width: 92.5%;
+      background-color: rgba(255,255,255,0.15);
+      border: none;
+      @include input-style();
+
+      &:focus {
+        outline: none;
+      }
+    }
+    
+    .threads, .invite-people {
+      margin: 25px 0 25px 0;
+    }  
+
+    .bell-icon {
+      @include right-float();
+      @include partial-opacity();
+    }
+  }
+
+  h2 {
+    font-size: $default-font-size;
+    margin-bottom: 5px;
+    @include bold-font();
+    @include partial-opacity();
+  }
+  
+  h1 {
+    @include remove-margin-and-padding();
+    @include bold-font();
+  }
+  
+  ul {
+    list-style-type: none;
+    line-height: 1.55;
+    @include remove-margin-and-padding();
+  
+    li:last-child {
+      margin-bottom: 25px;
+    }
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    @include partial-opacity();
+  }
+
+  p {
+    @include partial-opacity();
+  }
+}
+
+h2, a, p, .plus-icon, .bell-icon, .down-icon {
+  opacity: 0.75;
+}
+
+.front-end-set-up .channel-name {
+  font-weight: 900;
+}
+
+.mention-badge {
+  visibility: hidden;
+}
+
+.front-end-set-up .mention-badge {
+  float: right;
+  visibility: visible;
+  text-align: center;
+  width: 25px;
+  border-radius: 12.5px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}

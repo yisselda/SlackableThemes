@@ -4,9 +4,17 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
+    "@babel/runtime": "^7.6.3",
+    "@emotion/core": "^10.0.21",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.6",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
+    "axios": "^0.19.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-named-asset-import": "^0.3.4",
     "babel-preset-react-app": "^9.0.2",
@@ -15,8 +23,9 @@
     "css-loader": "2.1.1",
     "dotenv": "6.2.0",
     "dotenv-expand": "5.1.0",
+    "emotion": "^10.0.17",
     "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "eslint-config-react-app": "^5.0.2",
     "eslint-plugin-flowtype": "3.13.0",
     "eslint-plugin-import": "2.18.2",
@@ -42,8 +51,10 @@
     "postcss-safe-parser": "4.0.1",
     "react": "^16.10.2",
     "react-app-polyfill": "^1.0.4",
+    "react-color": "^2.17.3",
     "react-dev-utils": "^9.1.0",
     "react-dom": "^16.10.2",
+    "react-dropzone": "^10.2.1",
     "resolve": "1.12.0",
     "resolve-url-loader": "3.1.0",
     "sass-loader": "7.2.0",
@@ -60,7 +71,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "jest",
+    "test-watch": "jest --watchAll",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -88,7 +102,9 @@
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
-    "setupFilesAfterEnv": [],
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
@@ -131,11 +147,18 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
     "eslint-loader": "^3.0.2",
-    "eslint-plugin-jest": "^22.17.0",
+    "jest-emotion": "^10.0.17",
+    "jest-styled-components": "^6.3.3",
+    "sinon": "^7.5.0",
+    "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-react": "^7.14.3"
   }
 }

@@ -29,6 +29,8 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 
+CODEOWNERS
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
