@@ -19,7 +19,7 @@ You'll be able to choose between:
 
 ## Features
 
-- Generate a random theme from an image, like a logo.
+- Generate a random theme from any image, like a photo or a logo.
 - Manually set the sidebar's theme.
 - Use Slack's preset themes and modify them.
 - Preview in dark mode. (TBA)
