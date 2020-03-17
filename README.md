@@ -5,7 +5,7 @@
 
 Create and preview a Slack theme.
 
-https://slackable-themes.herokuapp.com/
+https://www.slackable-themes.com/
 
 ## What?
 
