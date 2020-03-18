@@ -37,7 +37,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Deployed app lives on Heroku
 
 - staging: https://slackable-themes-staging.herokuapp.com/
-- production: https://slackable-themes.herokuapp.com/
 
 ## Available Scripts
 
