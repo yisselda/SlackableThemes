@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from 'react';
 import '../styles/sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy, faBookmark, faAddressCard, faEdit } from '@fortawesome/fontawesome-free-regular';
@@ -22,12 +21,6 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
       color: activeItemText
     }
   })
-
-  const hoverBoldText = () => css({
-    '&:hover': {
-      opacity: 100
-    }
-  })
   
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
@@ -42,7 +35,6 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
     </div>
 
     <div className='sidebar-nav'>
-      {/* <div className='options-container'> */}
         <table className='options-container'>
           <tbody>
           <tr>
