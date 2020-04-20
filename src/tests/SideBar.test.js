@@ -43,35 +43,27 @@ describe('SideBar', () => {
     expect(wrapper.find('.username').text()).toBe('● Yisselda');
   })
 
-  it('displays a Threads section', () => {
-    expect(wrapper.find('.threads').text()).toMatch(/Threads/);
-  })
-
-  it('renders a display only input box', () => {
-    const input = wrapper.find('input');
-    input.value = 'Jump to...';
-    expect(input.value).toEqual('Jump to...');
-    input.simulate("change", {target: { value: 'random'} });
-    expect(input.value).toEqual('Jump to...');
+  it('displays a sidebar-nav section', () => {
+    expect(wrapper.exists('.options-container')).toEqual(true);
+    // expect(wrapper.find('.threads-option').text()).toMatch(/Threads/);
   })
 
   it('renders a channel section', () => {
     expect(wrapper.find('.channels').text()).toBe('Channels');
-    expect(wrapper.find('.channels-list').children()).toHaveLength(channels.length);
+    expect(wrapper.find('.channels-list').children()).toHaveLength(channels.length + 1);
   })
 
   it('renders a Direct Messages section', () => {
     expect(wrapper.find('.direct-messages').text()).toBe('Direct Messages');
-    expect(wrapper.find('.messages-list').children()).toHaveLength(messages.length);
+    expect(wrapper.find('.messages-list').children()).toHaveLength(messages.length + 1);
   })
 
   it('renders an Apps section', () => {
     expect(wrapper.find('.apps').text()).toBe('Apps');
-    expect(wrapper.find('.apps-list').children()).toHaveLength(apps.length);
   })
 
   it('renders an invite option', () => {
-    expect(wrapper.find('.invite-people').text()).toBe('+ Invite people');
+    expect(wrapper.find('.invite-people').text()).toMatch(/Invite people/);
   })
 
   describe('renders sidebar styles properly', () => {
@@ -92,26 +84,6 @@ describe('SideBar', () => {
     it('highlights the top menu div on hover', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
       expect(wrapper.find('.sidebar-menu')).toHaveStyleRule('background-color', menuBgHover, { target: ':hover'});
-    })
-
-    it('highlights p tags on focus', () => {
-      wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.invite-people')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
-      expect(wrapper.find('.threads')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
-    })
-
-    it('highlights line items on focus', () => {
-      wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.channels-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
-      expect(wrapper.find('.messages-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
-      expect(wrapper.find('.apps-list').children()).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
-    })
-
-    it('boldens h2 text on hover', () => {
-      wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.channels')).toHaveStyleRule('opacity', '100', { target: ':hover'});
-      expect(wrapper.find('.direct-messages')).toHaveStyleRule('opacity', '100', { target: ':hover'});
-      expect(wrapper.find('.apps')).toHaveStyleRule('opacity', '100', { target: ':hover'});
     })
 
     it('highlights the active item on focus', () => {

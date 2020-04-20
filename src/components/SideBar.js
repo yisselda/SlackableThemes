@@ -44,6 +44,7 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
     <div className='sidebar-nav'>
       {/* <div className='options-container'> */}
         <table className='options-container'>
+          <tbody>
           <tr>
             <td>
               <FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> 
@@ -108,6 +109,7 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
               <p className='less-option' css={ hoverBackground }>Show Less</p>
             </td>
           </tr>
+          </tbody>
         </table>
 
     <div className='chat-container'>
@@ -115,7 +117,7 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
         <div className='channels-container'>
         <FontAwesomeIcon className='down-icon' icon={faCaretDown} />
         <FontAwesomeIcon className='plus-icon' icon={faPlus} />
-          <h2 className='channels' css={ hoverBoldText }>Channels</h2>
+          <h2 className='channels'>Channels</h2>
           <ul className='channels-list' >
             {channels.map((channel) => 
               <li key={channel} css={ hoverBackground }>
@@ -123,22 +125,37 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
                   # &nbsp;<span className="channel-name">{channel}</span>
                   <span className="mention-badge" style={{ backgroundColor: mentionBadge }}>2</span>
                 </a>
-              </li>)}
+              </li>
+            )}
+            <a href="#" className="add-channel" css={ activeBackground }>
+              &nbsp; + &nbsp;<span className="channel-name">Add a channel</span>
+            </a>
           </ul>
         </div>
             
         <div className='messages-container'>
         <FontAwesomeIcon className='down-icon' icon={faCaretDown} />
         <FontAwesomeIcon className='plus-icon' icon={faPlus} />
-          <h2 className='direct-messages' css={ hoverBoldText }>Direct Messages</h2>
+          <h2 className='direct-messages'>Direct Messages</h2>
           <ul className='messages-list'>
-            {messages.map((message) => <li key={message} css={ hoverBackground }><a href='#' className={message} css={ activeBackground }><span className='active-status' style={{ color: activePresence }}>● &nbsp;</span> {message}</a></li>)}
+            {messages.map((message) => <li key={message} css={ hoverBackground }>
+              <a href='#' className={message} css={ activeBackground }>
+                <span className='active-status' style={{ color: activePresence }}>
+                  ● &nbsp;</span> {message}
+                </a>
+              </li>
+            )}
+            <li key="invite-people" css={ hoverBackground }>
+              <a href="#" className="invite-people" css={ activeBackground }>
+                &nbsp; + &nbsp;<span className="channel-name">Invite people</span>
+              </a>
+            </li>
           </ul>
         </div>
         
         <FontAwesomeIcon className='down-icon' icon={faCaretDown} />
         <FontAwesomeIcon className='plus-icon' icon={faPlus} />
-        <h2 className='apps' css={ hoverBoldText }>Apps</h2>
+        <h2 className='apps'>Apps</h2>
       </div>
     </div>
     </div>

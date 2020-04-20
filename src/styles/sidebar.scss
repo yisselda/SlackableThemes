@@ -98,6 +98,10 @@ $title-font-size: 1.125rem;
     .down-icon {
       @include left-float();
     }
+
+    .invite-people, .add-channel {
+      margin-bottom: 30px;
+    }
   }
 
   h2 {
