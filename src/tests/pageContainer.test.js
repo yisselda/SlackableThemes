@@ -9,7 +9,6 @@ describe("PageContainer", () => {
 
   const aubergine = [
     '#3F0E40',
-    '#350d36',
     '#1164A3',
     '#FFFFFF',
     '#350D36',

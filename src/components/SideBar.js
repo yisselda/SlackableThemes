@@ -5,104 +5,59 @@ import { faCopy, faBookmark, faAddressCard, faEdit } from '@fortawesome/fontawes
 import { faCommentDots, faChevronDown, faAt, faBraille, faLayerGroup, faArrowUp, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { jsx, css } from '@emotion/core';
 
-export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
+export default function SideBar({ theme: [ columnBg, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
   const channels = ['front-end-set-up','general', 'random'];
   const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
   
-  const hoverBackground = () => css({
-    '&:hover': {
-      backgroundColor: hoverItem
+  const hoverBackground = css`
+    &:hover {
+      background-color: ${hoverItem};
+      background-clip: border-box;
     }
-  })
+  `
 
-  const activeBackground = () => css({
-    '&:focus': {
-      backgroundColor: activeItem,
-      color: activeItemText
+  const activeBackground = css`
+    &:focus {
+      background-color: ${activeItem};
+      color: ${activeItemText};
     }
-  })
+  `
   
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
-    <div className='sidebar-menu' css={{
-      '&:hover': {
-        backgroundColor: menuBgHover
-      }
-    }}>
+    <div className='sidebar-menu' css={hoverBackground}>
       <FontAwesomeIcon className='edit-icon' icon={faEdit} />
       <h1 className='company-name'>SlackableThemes <FontAwesomeIcon className='down-icon' icon={faChevronDown} /> </h1>
       <p className='username'><span className='active-status' style={{ color: activePresence }} >●</span> Yisselda</p>
     </div>
 
     <div className='sidebar-nav'>
-        <table className='options-container'>
-          <tbody>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> 
-            </td>
-            <td>
-              <p className='threads-option' css={ hoverBackground }>Threads</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='at-icon' icon={faAt} />
-            </td>
-            <td>
-              <p className='mentions-option' css={ hoverBackground }>Mentions & reactions</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='draft-icon' icon={faCopy} />
-            </td>
-            <td>
-              <p className='drafts-option' css={ hoverBackground }>Drafts</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='bookmark-icon' icon={faBookmark} />
-            </td>
-            <td>
-              <p className='bookmarks-option' css={ hoverBackground }>Saved Items</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='people-icon' icon={faAddressCard} />
-            </td>
-            <td>
-              <p className='people-option' css={ hoverBackground }>People</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='apps-icon' icon={faBraille} />
-            </td>
-            <td>
-              <p className='apps-option' css={ hoverBackground }>Apps</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='files-icon' icon={faLayerGroup} />
-            </td>
-            <td>
-              <p className='files-option' css={ hoverBackground }>Files</p>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <FontAwesomeIcon className='up-icon' icon={faArrowUp} />
-            </td>
-            <td>
-              <p className='less-option' css={ hoverBackground }>Show Less</p>
-            </td>
-          </tr>
-          </tbody>
-        </table>
+      <ul className='options-container' >
+        <li css={ hoverBackground }>
+          <a href="#" className='threads-option' css={ activeBackground }><FontAwesomeIcon className='chat-icon' icon={faCommentDots} /> Threads</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='mentions-option' css={ activeBackground }><FontAwesomeIcon className='at-icon' icon={faAt} /> Mentions & reactions</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='drafts-option' css={ activeBackground }><FontAwesomeIcon className='draft-icon' icon={faCopy} /> Drafts</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='bookmarks-option' css={ activeBackground }><FontAwesomeIcon className='bookmark-icon' icon={faBookmark} /> Saved Items</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='people-option' css={ activeBackground }><FontAwesomeIcon className='people-icon' icon={faAddressCard} /> People</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='apps-option' css={ activeBackground }><FontAwesomeIcon className='apps-icon' icon={faBraille} /> Apps</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='files-option' css={ activeBackground }><FontAwesomeIcon className='files-icon' icon={faLayerGroup} /> Files</a>
+        </li>
+        <li css={ hoverBackground }>
+          <a href="#" className='less-option' css={ activeBackground }><FontAwesomeIcon className='up-icon' icon={faArrowUp} /> Show Less</a>
+        </li>
+      </ul>
 
     <div className='chat-container'>
       <div className='chat-options'>

@@ -13,7 +13,6 @@ describe('SideBar', () => {
 
   const aubergine = [
     '#3F0E40',
-    '#350d36',
     '#1164A3',
     '#FFFFFF',
     '#350D36',
@@ -22,7 +21,7 @@ describe('SideBar', () => {
     '#CD2553'
   ]
   
-  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
+  const [ columnBg, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
 
   beforeEach(() => {
     wrapper = shallow(<SideBar theme={aubergine}/>);
@@ -42,14 +41,14 @@ describe('SideBar', () => {
 
   it('displays a sidebar-nav section', () => {
     expect(wrapper.exists('.options-container')).toEqual(true);
-    expect(wrapper.find('.threads-option').text()).toBe('Threads');
-    expect(wrapper.find('.mentions-option').text()).toBe('Mentions & reactions');
-    expect(wrapper.find('.drafts-option').text()).toBe('Drafts');
-    expect(wrapper.find('.bookmarks-option').text()).toBe('Saved Items');
-    expect(wrapper.find('.people-option').text()).toBe('People');
-    expect(wrapper.find('.apps-option').text()).toBe('Apps');
-    expect(wrapper.find('.files-option').text()).toBe('Files');
-    expect(wrapper.find('.less-option').text()).toBe('Show Less');
+    expect(wrapper.find('.threads-option').text()).toMatch(/Threads/);
+    expect(wrapper.find('.mentions-option').text()).toMatch(/Mentions & reactions/);
+    expect(wrapper.find('.drafts-option').text()).toMatch(/Drafts/);
+    expect(wrapper.find('.bookmarks-option').text()).toMatch(/Saved Items/);
+    expect(wrapper.find('.people-option').text()).toMatch(/People/);
+    expect(wrapper.find('.apps-option').text()).toMatch(/Apps/);
+    expect(wrapper.find('.files-option').text()).toMatch(/Files/);
+    expect(wrapper.find('.less-option').text()).toMatch(/Show Less/);
   })
 
   it('renders a channel section', () => {
@@ -89,7 +88,7 @@ describe('SideBar', () => {
 
     it('highlights the top menu div on hover', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
-      expect(wrapper.find('.sidebar-menu')).toHaveStyleRule('background-color', menuBgHover, { target: ':hover'});
+      expect(wrapper.find('.sidebar-menu')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
     })
 
     it('highlights the active item on focus', () => {

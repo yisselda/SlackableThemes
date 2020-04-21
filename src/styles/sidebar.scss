@@ -71,18 +71,13 @@ $title-font-size: 1.125rem;
     @include lighter-border();
     
     .options-container {
-      table {
-        border-collapse: separate;
-        border-spacing: 50px 0;
+      list-style-type: none;
+      line-height: 2;
+      @include remove-margin-and-padding();
+    
+      li:last-child {
+        margin-bottom: 50px;
       }
-
-      td {
-        line-height: 0;
-        padding: 0 2px;
-        margin: 0;
-      }
-
-      margin-bottom: 45px;
     }
 
     .plus-icon {

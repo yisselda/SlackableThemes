@@ -25,5 +25,5 @@ PageContainer.defaultProps = {
 };
 
 PageContainer.propTypes = {
-  theme: PropTypes.array,
+  theme: PropTypes.arrayOf(PropTypes.string.isRequired),
 };

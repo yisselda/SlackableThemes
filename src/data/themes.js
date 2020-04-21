@@ -5,7 +5,6 @@ const presetThemes = [
         image: 'images/aubergine.png',
         themeColor: [
             '#3F0E40',
-            '#350d36',
             '#1164A3',
             '#FFFFFF',
             '#350D36',
@@ -20,7 +19,6 @@ const presetThemes = [
         image: 'images/aubergine_classic.png',
         themeColor: [
             '#4D394B',
-            '#3E313C',
             '#4C9689',
             '#FFFFFF',
             '#3E313C',
@@ -34,7 +32,6 @@ const presetThemes = [
         theme: 'Hoth',
         image: 'images/hoth.png',
         themeColor: [
-            '#F8F8FA',
             '#F8F8FA',
             '#2D9EE0',
             '#FFFFFF',
@@ -50,7 +47,6 @@ const presetThemes = [
         image: 'images/monument.png',
         themeColor: [
             '#0D7E83',
-            '#076570',
             '#F79F66',
             '#FFFFFF',
             '#D37C71',
@@ -65,7 +61,6 @@ const presetThemes = [
         image: 'images/chocolate.png',
         themeColor: [
             '#544538',
-            '#42362B',
             '#5DB09D',
             '#FFFFFF',
             '#4A3C30',
@@ -80,7 +75,6 @@ const presetThemes = [
         image: 'images/ocean.png',
         themeColor: [
             '#303E4D',
-            '#2C3849',
             '#6698C8',
             '#FFFFFF',
             '#4A5664',
@@ -95,7 +89,6 @@ const presetThemes = [
         image: 'images/workhard.png',
         themeColor: [
             '#4D5250',
-            '#444A47',
             '#D39B46',
             '#FFFFFF',
             '#434745',
@@ -110,7 +103,6 @@ const presetThemes = [
         image: 'images/nocturne.png',
         themeColor: [
             '#1A1D21',
-            '#000000',
             '#0576B9',
             '#FFFFFF',
             '#000000',
@@ -125,7 +117,6 @@ const presetThemes = [
         image: 'images/brinjal.png',
         themeColor: [
             '#4F2F4C',
-            '#452842',
             '#8C5888',
             '#FFFFFF',
             '#1C0B1A',
@@ -140,7 +131,6 @@ const presetThemes = [
         image: 'images/solanum.png',
         themeColor: [
             '#4F2F4C',
-            '#452842',
             '#8C5888',
             '#FFFFFF',
             '#1C0B1A',

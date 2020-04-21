@@ -6,7 +6,7 @@ import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
 import presetThemes from '../data/themes';
 
-export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
+export default function DashBoard({ setTheme, theme, theme: [ columnBg, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ]}) {
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
   const [ color, setColor ] = useState('#00ffff');
 
@@ -38,13 +38,14 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
       <h2 className="default-theme-title">Custom Theme</h2>
       <div className="colorpickers-container">
         <ColorPicker label="Column BG" color={columnBg} onChange={(newColor, position, e) => onColorChange(newColor, 0, e)}/>
-        <ColorPicker label="Menu BG Hover" color={menuBgHover} onChange={(newColor, position, e) => onColorChange(newColor, 1, e)}/>
-        <ColorPicker label="Active Item" color={activeItem} onChange={(newColor, position, e) => onColorChange(newColor, 2, e)}/>
-        <ColorPicker label="Active Item Text" color={activeItemText} onChange={(newColor, position, e) => onColorChange(newColor, 3, e)}/>
-        <ColorPicker label="Hover Item" color={hoverItem} onChange={(newColor, position, e) => onColorChange(newColor, 4, e)}/>
-        <ColorPicker label="Text Color" color={textColor} onChange={(newColor, position, e) => onColorChange(newColor, 5, e)}/>
-        <ColorPicker label="Active Presence" color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
-        <ColorPicker label="Mention Badge" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 7, e)}/>
+        <ColorPicker label="Active Item" color={activeItem} onChange={(newColor, position, e) => onColorChange(newColor, 1, e)}/>
+        <ColorPicker label="Active Item Text" color={activeItemText} onChange={(newColor, position, e) => onColorChange(newColor, 2, e)}/>
+        <ColorPicker label="Hover Item" color={hoverItem} onChange={(newColor, position, e) => onColorChange(newColor, 3, e)}/>
+        <ColorPicker label="Text Color" color={textColor} onChange={(newColor, position, e) => onColorChange(newColor, 4, e)}/>
+        <ColorPicker label="Active Presence" color={activePresence} onChange={(newColor, position, e) => onColorChange(newColor, 5, e)}/>
+        <ColorPicker label="Mention Badge" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
+        {/* <ColorPicker label="Top Nav BG" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/>
+        <ColorPicker label="Top Nav Text" color={mentionBadge} onChange={(newColor, position, e) => onColorChange(newColor, 6, e)}/> */}
       </div>
       <h2 className="default-theme-title">Copy and paste these values to share your custom theme with others</h2>
       <ColorInput theme={theme}/>
