@@ -67,41 +67,23 @@ $title-font-size: 1.125rem;
   }
 
   .sidebar-nav {
-    padding: 16px;
     @include lighter-border();
-    
-    .options-container {
-      list-style-type: none;
-      line-height: 2;
-      @include remove-margin-and-padding();
-    
-      li:last-child {
-        margin-bottom: 50px;
-      }
-    }
 
     .plus-icon {
       @include right-float();
     }
 
     .chat-options {
-      margin: -16px;
-      padding: 16px;
       @include lighter-border();
     }
 
     .down-icon {
       @include left-float();
     }
-
-    .invite-people, .add-channel {
-      margin-bottom: 30px;
-    }
   }
 
   h2 {
     font-size: $default-font-size;
-    margin-bottom: 15px;
     @include bold-font();
     @include partial-opacity();
   }
@@ -109,20 +91,6 @@ $title-font-size: 1.125rem;
   h1 {
     @include remove-margin-and-padding();
     @include bold-font();
-  }
-  
-  ul {
-    list-style-type: none;
-    line-height: 1.75;
-    @include remove-margin-and-padding();
-
-    li {
-      margin-left: 5px;
-    }
-  
-    li:last-child {
-      margin-bottom: 25px;
-    }
   }
   
   a {
@@ -135,6 +103,44 @@ $title-font-size: 1.125rem;
   p {
     @include partial-opacity();
   }
+
+  .options-container {
+    list-style-type: none;
+    line-height: 2;
+    margin: 0;
+    padding: 16px 0px 0px 0px;
+
+    li {
+      text-indent: 1em;
+    }
+  
+    li:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  .channels-container, .messages-container, .apps-container {
+    padding: 16px 10px;
+  }
+
+  .channels, .direct-messages, .apps {
+    @include remove-margin-and-padding();
+  }
+
+  .channels-list, .messages-list {
+    list-style-type: none;
+    line-height: 1.75;
+    @include remove-margin-and-padding();
+
+    li {
+      text-indent: 1em;
+    }
+
+    li:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
 }
 
 h2, a, p, .down-icon {
@@ -148,10 +154,10 @@ h2, a, p, .down-icon {
 .front-end-set-up .mention-badge {
   @include right-float();
   visibility: visible;
-  text-align: center;
-  width: 25px;
   border-radius: 12.5px;
   font-size: 0.75rem;
   font-weight: 900;
   margin-top: 3.5px;
+  margin-right: 10px;
+  padding-right: 12.5px;
 }
