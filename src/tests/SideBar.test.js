@@ -12,16 +12,19 @@ describe('SideBar', () => {
   const messages = ['Slackbot','yisselda', 'terrance', 'christine']
 
   const aubergine = [
-    '#3F0E40',
-    '#1164A3',
-    '#FFFFFF',
-    '#350D36',
-    '#FFFFFF',
-    '#2BAC76',
-    '#CD2553'
+    "#3F0E40",
+    "#350d36",
+    "#1164A3",
+    "#FFFFFF",
+    "#350D36",
+    "#FFFFFF",
+    "#2BAC76",
+    "#CD2553",
+    "#350d36",
+    "#FFFFFF"
   ]
   
-  const [ columnBg, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
+  const [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge ] = aubergine;
 
   beforeEach(() => {
     wrapper = shallow(<SideBar theme={aubergine}/>);
