@@ -21,13 +21,16 @@ const presetThemes = [
         theme: 'Aubergine Classic',
         image: 'images/aubergine_classic.png',
         themeColor: [
-            '#4D394B',
-            '#4C9689',
-            '#FFFFFF',
-            '#3E313C',
-            '#FFFFFF',
-            '#38978D',
-            '#EB4D5C'
+          '#4D394B',
+          '#3E313C',
+          '#4C9689',
+          '#FFFFFF',
+          '#3E313C',
+          '#FFFFFF',
+          '#38978D',
+          '#EB4D5C',
+          '#3E313C',
+          '#FFFFFF'
         ],
     },
     {
@@ -35,13 +38,16 @@ const presetThemes = [
         theme: 'Hoth',
         image: 'images/hoth.png',
         themeColor: [
-            '#F8F8FA',
-            '#2D9EE0',
-            '#FFFFFF',
-            '#FFFFFF',
-            '#383F45',
-            '#60D156',
-            '#DC5960'
+          '#F8F8FA',
+          '#F8F8FA',
+          '#2D9EE0',
+          '#FFFFFF',
+          '#FFFFFF',
+          '#383F45',
+          '#60D156',
+          '#DC5960',
+          '#F8F8FA',
+          '#383F45'
         ],
     },
     {
@@ -49,13 +55,16 @@ const presetThemes = [
         theme: 'Monument',
         image: 'images/monument.png',
         themeColor: [
-            '#0D7E83',
-            '#F79F66',
-            '#FFFFFF',
-            '#D37C71',
-            '#FFFFFF',
-            '#F79F66',
-            '#F15340'
+          '#0D7E83',
+          '#076570',
+          '#F79F66',
+          '#FFFFFF',
+          '#D37C71',
+          '#FFFFFF',
+          '#F79F66',
+          '#F15340',
+          '#076570',
+          '#FFFFFF'
         ],
     },
     {
@@ -63,13 +72,16 @@ const presetThemes = [
         theme: 'Choco Mint',
         image: 'images/chocolate.png',
         themeColor: [
-            '#544538',
-            '#5DB09D',
-            '#FFFFFF',
-            '#4A3C30',
-            '#FFFFFF',
-            '#FFFFFF',
-            '#5DB09D'
+          '#544538',
+          '#42362B',
+          '#5DB09D',
+          '#FFFFFF',
+          '#4A3C30',
+          '#FFFFFF',
+          '#FFFFFF',
+          '#5DB09D',
+          '#42362B',
+          '#FFFFFF'
         ],
     },
     {
@@ -77,13 +89,16 @@ const presetThemes = [
         theme: 'Ochin',
         image: 'images/ocean.png',
         themeColor: [
-            '#303E4D',
-            '#6698C8',
-            '#FFFFFF',
-            '#4A5664',
-            '#FFFFFF',
-            '#94E864',
-            '#78AF8F'
+          '#303E4D',
+          '#2C3849',
+          '#6698C8',
+          '#FFFFFF',
+          '#4A5664',
+          '#FFFFFF',
+          '#94E864',
+          '#78AF8F',
+          '#2C3849',
+          '#FFFFFF'
         ],
     },
     {
@@ -91,13 +106,16 @@ const presetThemes = [
         theme: 'Work Hard',
         image: 'images/workhard.png',
         themeColor: [
-            '#4D5250',
-            '#D39B46',
-            '#FFFFFF',
-            '#434745',
-            '#FFFFFF',
-            '#99D04A',
-            '#DB6668'
+          '#4D5250',
+          '#444A47',
+          '#D39B46',
+          '#FFFFFF',
+          '#434745',
+          '#FFFFFF',
+          '#99D04A',
+          '#DB6668',
+          '#444A47',
+          '#FFFFFF'
         ],
     },
     {
@@ -105,13 +123,16 @@ const presetThemes = [
         theme: 'Nocturne',
         image: 'images/nocturne.png',
         themeColor: [
-            '#1A1D21',
-            '#0576B9',
-            '#FFFFFF',
-            '#000000',
-            '#FFFFFF',
-            '#39E500',
-            '#CC4400'
+          '#1A1D21',
+          '#000000',
+          '#0576B9',
+          '#FFFFFF',
+          '#000000',
+          '#FFFFFF',
+          '#39E500',
+          '#CC4400',
+          '#000000',
+          '#FFFFFF'
         ],
     },
     {
@@ -119,13 +140,16 @@ const presetThemes = [
         theme: 'Tritanopia',
         image: 'images/brinjal.png',
         themeColor: [
-            '#4F2F4C',
-            '#8C5888',
-            '#FFFFFF',
-            '#1C0B1A',
-            '#FFFFFF',
-            '#00FFB7',
-            '#DE4C0D'
+          '#4F2F4C',
+          '#452842',
+          '#8C5888',
+          '#FFFFFF',
+          '#1C0B1A',
+          '#FFFFFF',
+          '#00FFB7',
+          '#DE4C0D',
+          '#452842',
+          '#FFFFFF"'
         ],
     },
     {
@@ -133,13 +157,16 @@ const presetThemes = [
         theme: 'Protanopia & Deuteranopia',
         image: 'images/solanum.png',
         themeColor: [
-            '#4F2F4C',
-            '#8C5888',
-            '#FFFFFF',
-            '#1C0B1A',
-            '#FFFFFF',
-            '#D0FF00',
-            '#889100'
+          '#4F2F4C',
+          '#452842',
+          '#8C5888',
+          '#FFFFFF',
+          '#1C0B1A',
+          '#FFFFFF',
+          '#D0FF00',
+          '#889100',
+          '#452842',
+          '#FFFFFF'
         ],
     },
 ]
