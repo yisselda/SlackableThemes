@@ -1,5 +1,5 @@
 import React from 'react';
-import { Circle, Heart } from 'react-spinners-css';
+import Circle from '@bit/joshk.react-spinners-css.circle';
 import Dropzone from 'react-dropzone';
 import '../styles/image-upload.scss';
 import ApiCommunicator from '../data/api-communicator';

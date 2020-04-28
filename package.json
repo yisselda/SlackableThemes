@@ -5,6 +5,7 @@
   "dependencies": {
     "@babel/core": "7.6.0",
     "@babel/runtime": "^7.9.2",
+    "@bit/joshk.react-spinners-css.circle": "^1.1.8",
     "@emotion/core": "^10.0.28",
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
