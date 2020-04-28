@@ -17,6 +17,11 @@ $title-font-size: 1.125rem;
   float: right;
 }
 
+@mixin left-float {
+  float: left;
+  margin-right: 10px;
+}
+
 @mixin partial-opacity {
   opacity: 0.75;
 }
@@ -26,6 +31,11 @@ $title-font-size: 1.125rem;
   padding: 7.5px;
   font-size: $user-font-size;
   margin-right: 10px;
+}
+
+@mixin lighter-border {
+  border-radius: 1px;
+  box-shadow: 0px 0px 0px 1px rgba(255,255,255,0.3);   
 }
 
 .sidebar {
@@ -45,45 +55,35 @@ $title-font-size: 1.125rem;
       margin: 5px 0px 0px 0px;
     }
 
-    .bell-icon {
-      font-size: 1.25rem;
-      @include right-float();
-      @include partial-opacity();
-    }
-    
     .down-icon {
       font-size: 0.75rem;
       @include partial-opacity();
     }
+
+    .edit-icon {
+      @include right-float();
+      margin-top: 2.5px;
+    }
   }
 
   .sidebar-nav {
-    padding: 16px;
+    @include lighter-border();
 
-    .find-input {
-      width: 92.5%;
-      background-color: rgba(255,255,255,0.15);
-      border: none;
-      @include input-style();
-
-      &:focus {
-        outline: none;
-      }
-    }
-    
-    .threads, .invite-people {
-      margin: 25px 0 25px 0;
-    }  
-
-    .bell-icon {
+    .plus-icon {
       @include right-float();
-      @include partial-opacity();
+    }
+
+    .chat-options {
+      @include lighter-border();
+    }
+
+    .down-icon {
+      @include left-float();
     }
   }
 
   h2 {
     font-size: $default-font-size;
-    margin-bottom: 5px;
     @include bold-font();
     @include partial-opacity();
   }
@@ -91,16 +91,6 @@ $title-font-size: 1.125rem;
   h1 {
     @include remove-margin-and-padding();
     @include bold-font();
-  }
-  
-  ul {
-    list-style-type: none;
-    line-height: 1.55;
-    @include remove-margin-and-padding();
-  
-    li:last-child {
-      margin-bottom: 25px;
-    }
   }
   
   a {
@@ -113,14 +103,47 @@ $title-font-size: 1.125rem;
   p {
     @include partial-opacity();
   }
+
+  .options-container {
+    list-style-type: none;
+    line-height: 2;
+    margin: 0;
+    padding: 16px 0px 0px 0px;
+
+    li {
+      text-indent: 1em;
+    }
+  
+    li:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  .channels-container, .messages-container, .apps-container {
+    padding: 16px 10px;
+  }
+
+  .channels, .direct-messages, .apps {
+    @include remove-margin-and-padding();
+  }
+
+  .channels-list, .messages-list {
+    list-style-type: none;
+    line-height: 1.75;
+    @include remove-margin-and-padding();
+
+    li {
+      text-indent: 1em;
+    }
+
+    li:last-child {
+      margin-bottom: 30px;
+    }
+  }
 }
 
-h2, a, p, .plus-icon, .bell-icon, .down-icon {
+h2, a, p, .down-icon {
   opacity: 0.75;
-}
-
-.front-end-set-up .channel-name {
-  font-weight: 900;
 }
 
 .mention-badge {
@@ -128,11 +151,12 @@ h2, a, p, .plus-icon, .bell-icon, .down-icon {
 }
 
 .front-end-set-up .mention-badge {
-  float: right;
+  @include right-float();
   visibility: visible;
-  text-align: center;
-  width: 25px;
   border-radius: 12.5px;
   font-size: 0.75rem;
   font-weight: 900;
+  margin-top: 3.5px;
+  margin-right: 10px;
+  padding-right: 12.5px;
 }
