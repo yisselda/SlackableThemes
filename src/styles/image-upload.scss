@@ -1,3 +1,7 @@
+@import "dashboard.scss";
+@import "sidebar.scss";
+@import "index.scss";
+
 .image-upload {
   border: 2px solid darkgrey;
   color: gray;
@@ -22,4 +26,20 @@
   }
 }
 
+.preview-spinner {
+  height: 30px!important;
+  width: 30px!important;
+  margin-bottom: -8px!important;
+}
 
+.resend-button {
+  font-weight: bold;
+  text-decoration: none;
+  align-items: center;
+  font-size: 15px;
+  min-width: 80px;
+  margin: 5px 0;
+  padding: 0 12px 1px;
+  font-family: $default-font-family;
+  @include input-style();
+}
