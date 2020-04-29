@@ -11,11 +11,9 @@
       gtag('config', 'UA-164887068-1');
     </script>
     <script>
-      var host = "www.slackable-themes.com" || "slackable-themes.com" || "www.slackablethemes.com" || "slackablethemes.com";
-      console.log(window.location.host)
-      console.log(window.location.protocol)
-      if ((host == window.location.host) && (window.location.protocol != "https:")){
-      window.location.protocol = "https";
+      var hosts = ["www.slackable-themes.com", "slackable-themes.com", "www.slackablethemes.com", "slackablethemes.com"];
+      if (hosts.includes(location.host) && (location.protocol != "https:")) {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
       }
     </script>
 
