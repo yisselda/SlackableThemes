@@ -71,7 +71,7 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
               <li key={channel} css={ hoverBackground }>
                 <a  href='#!' className={channel} css={ activeBackground }>
                   # &nbsp;<span className="channel-name">{channel}</span>
-                  <span className="mention-badge" style={{ backgroundColor: mentionBadge }}>2</span>
+                  <span className="mention-badge" style={{ backgroundColor: mentionBadge, color: "#FFFFFF" }}>2</span>
                 </a>
               </li>
             )}
