@@ -6,8 +6,10 @@ import ColorPicker from '../components/ColorPicker';
 describe('<ColorPicker />', () => {
   let wrapper;
 
+  const testColor = "#3F0E40";
+
   beforeEach(() => {
-    wrapper = shallow(<ColorPicker label="Color Picker"/>);
+    wrapper = shallow(<ColorPicker label="Color Picker" color={testColor} />);
   })
 
   it('renders properly', () => {
