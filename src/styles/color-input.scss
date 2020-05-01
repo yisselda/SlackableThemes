@@ -1,3 +1,6 @@
+
+
+
 @import "dashboard.scss";
 @import "sidebar.scss";
 @import "index.scss";
@@ -27,6 +30,8 @@
     font-family: $default-font-family;
     @include input-style();
   }
+
+  .copied {
+    color: $green;
+  }
 }
-
-
