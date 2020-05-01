@@ -7,7 +7,7 @@ export default function ColorInput({ theme }){
     var promise = navigator.clipboard.writeText(str);
     setCopied(true);
 
-    setTimeout(function(){setCopied(false)}, 2000);
+    setTimeout(function(){setCopied(false)}, 1000);
   }
 
   const [copied, setCopied] = useState(false);
