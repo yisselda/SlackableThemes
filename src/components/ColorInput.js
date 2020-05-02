@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import '../styles/color-input.scss';
 
 export default function ColorInput({ theme }){
-  const copyToClipboard = (str, e) => {
+  const copyToClipboard = (e) => {
     e.preventDefault();
-    var promise = navigator.clipboard.writeText(str);
+    var promise = navigator.clipboard.writeText(theme);
     setCopied(true);
 
     setTimeout(function(){setCopied(false)}, 1000);
@@ -13,10 +13,12 @@ export default function ColorInput({ theme }){
   const [copied, setCopied] = useState(false);
   return (
     <div className='color-input'>
-      <form>
-        <input type="text" className="color-input-box" value={theme} readOnly/>
-        <input type="submit" className={copied ? "copy-button copied" : "copy-button"} value={copied ? "Copied !" : "Copy"} onClick={(e) => copyToClipboard(theme, e)} />
-      </form>
+      <input type="text" className="color-input-box" value={theme} readOnly/>
+      <button 
+        className={copied ? "copy-button copied" : "copy-button"}
+        onClick={(e) => copyToClipboard(e)}>
+          {copied ? "Copied !" : "Copy"}
+      </button>
     </div>
   )
 };
