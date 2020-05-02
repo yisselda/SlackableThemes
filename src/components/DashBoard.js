@@ -33,7 +33,7 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
   return (
     <div className='dashboard'>
       <h1 className="slackable-title" style={{color: columnBg}}>Slackable Themes</h1>
-      <p style={{"text-align":"center"}}><em>Create Slack themes from images, photos, and logos.</em></p>
+      <p style={{"textAlign":"center"}}><em>Create Slack themes from images, photos, and logos.</em></p>
       <h2 className="default-theme-title">Image Upload</h2>
       <ImageUpload updateThemeColors={setTheme} loadingColor={ columnBg }/>
       <h2 className="default-theme-title">Custom Theme</h2>
