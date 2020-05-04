@@ -3,12 +3,11 @@
 
 # SlackableThemes :small_blue_diamond:
 
-Create and preview a Slack theme.
+Create Slack Themes from your uploaded images and style them with interactive theme editor.
 
 https://slackable-themes.com/
 
 ## What?
-Create Slack Themes from uploaded image and the interactive theme editor.
 It enables you to dynamically change, preview and interact with the theme.
 You'll be able to choose between:
 
