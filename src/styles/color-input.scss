@@ -8,7 +8,7 @@
   }
 
   .color-input-box {
-    max-width: 545px;
+    max-width: 600px;
     width: 100%;
     margin: 0 8px 0 0;
     border: 1px solid black;
@@ -26,7 +26,10 @@
     padding: 0 12px 1px;
     font-family: $default-font-family;
     @include input-style();
+    cursor: pointer;
+  }
+
+  .copied {
+    color: $green;
   }
 }
-
-

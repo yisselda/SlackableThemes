@@ -37,7 +37,7 @@ const ImageUpload = ({ updateThemeColors, loadingColor }) => {
               {
                 file ?
                 <img src={URL.createObjectURL(file)} alt={file.name} />
-                : "Click me to upload a file!"
+                : "Click me to upload an image!"
               }
             </div>
           )}

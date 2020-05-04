@@ -110,6 +110,7 @@ describe('SideBar', () => {
       wrapper = mount(<SideBar theme={aubergine}/>);
       const item = wrapper.find(`.${channels[0]} .mention-badge`);
       expect(item.prop('style')).toHaveProperty('backgroundColor', mentionBadge);
+      expect(item.prop('style')).toHaveProperty('color', '#FFFFFF');
     })
   })
 })

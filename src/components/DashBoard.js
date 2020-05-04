@@ -33,6 +33,7 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
   return (
     <div className='dashboard'>
       <h1 className="slackable-title" style={{color: columnBg}}>Slackable Themes</h1>
+      <p style={{textAlign: "center"}}><em>Create Slack themes from images, photos, and logos.</em></p>
       <h2 className="default-theme-title">Image Upload</h2>
       <ImageUpload updateThemeColors={setTheme} loadingColor={ columnBg }/>
       <h2 className="default-theme-title">Custom Theme</h2>
@@ -47,7 +48,7 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
         <ColorPicker label="Top Nav BG" color={topNavBg} onChange={(newColor, position, e) => onColorChange(newColor, 8, e)}/>
         <ColorPicker label="Top Nav Text" color={topNavText} onChange={(newColor, position, e) => onColorChange(newColor, 9, e)}/>
       </div>
-      <h2 className="default-theme-title">Copy and paste these values to share your custom theme with others</h2>
+      <h2 className="default-theme-title">Copy and paste your custom theme into Slack!</h2>
       <ColorInput theme={theme}/>
       <h2 className="default-theme-title">Sidebar Themes</h2>
       {renderThemes(themes)}
