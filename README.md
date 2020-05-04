@@ -5,17 +5,17 @@
 
 Create and preview a Slack theme.
 
-https://www.slackable-themes.com/
+https://slackable-themes.com/
 
 ## What?
-
+Create Slack Themes from uploaded image and the interactive theme editor.
 It enables you to dynamically change, preview and interact with the theme.
 You'll be able to choose between:
 
-- Uploading an image to create random themes -> [See this repo](https://github.com/yisselda/not-purple-please)
+- Uploading an image to create themes with the color palette of the image -> [See this repo](https://github.com/yisselda/not-purple-please)
 - Preset themes
-- Color picking for each element
-- Manually enter string of hex color
+- Pick the color for each element
+- Manually enter the string for the color
 
 ## Features
 
