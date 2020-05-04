@@ -23,10 +23,13 @@ You'll be able to choose between:
 - Manually set the sidebar's theme.
 - Use Slack's preset themes and modify them.
 - Preview in dark mode. (TBA)
+- Slackbot (TBA)
 
 🏵 Please add feature requests!
 
-![SlackableThemes Mockup](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/SlackableThemesMockUp.png)
+## Here are examples of themes generated 
+![SlackableThemes Instagram Example](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/Instagram-Theme.png)
+![SlackableThemes  Google Theme Example](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/Google-Theme.jpeg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
