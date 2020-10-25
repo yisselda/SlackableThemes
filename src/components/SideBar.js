@@ -5,10 +5,10 @@ import { faCopy, faBookmark, faAddressCard, faEdit } from '@fortawesome/fontawes
 import { faCommentDots, faChevronDown, faAt, faBraille, faLayerGroup, faArrowUp, faPlus, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { jsx, css } from '@emotion/core';
 
-export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge, topNavBg, TopNavText ]}) {
-  const channels = ['front-end-set-up','general', 'random'];
-  const messages = ['Slackbot','yisselda', 'terrance', 'christine'];
-  
+export const channels = ['front-end-set-up','general', 'random'];
+export const messages = ['Slackbot','yisselda', 'terrance', 'christine', '_steph.js'];
+
+export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge, topNavBg, TopNavText ]}) {  
   const hoverBackground = css`
     &:hover {
       background-color: ${hoverItem};
@@ -22,7 +22,7 @@ export default function SideBar({ theme: [ columnBg, menuBgHover, activeItem, ac
       color: ${activeItemText};
     }
   `
-  
+   
   return (
   <div className='sidebar' style={{ backgroundColor: columnBg, color: textColor }} >
     <div className='sidebar-menu' css={hoverBackground}>

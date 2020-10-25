@@ -39,6 +39,7 @@ $title-font-size: 1.125rem;
 }
 
 .sidebar {
+  @include lighter-border();
   background-color: $purple;
   color: #fff;
   font-size: $default-font-size;
@@ -67,14 +68,9 @@ $title-font-size: 1.125rem;
   }
 
   .sidebar-nav {
-    @include lighter-border();
 
     .plus-icon {
       @include right-float();
-    }
-
-    .chat-options {
-      @include lighter-border();
     }
 
     .down-icon {

@@ -6,7 +6,8 @@
 
 .dashboard {
   padding: 16px;
-  margin: 0 10%
+  margin: 0 10%;
+  position: relative;
 }
 
 h1.slackable-title {
@@ -17,4 +18,9 @@ h1.slackable-title {
 
 h2.default-theme-title {
   @include title-style();
+}
+
+.dark-mode-switcher {
+  position: absolute;
+  right: 15px;
 }
