@@ -5,8 +5,8 @@
 }
 
 .dashboard {
-  padding: 16px;
-  margin: 0 10%
+  padding: 16px calc(16px + 10%);
+  overflow-y: auto;
 }
 
 h1.slackable-title {
