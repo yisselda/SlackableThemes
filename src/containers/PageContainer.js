@@ -8,7 +8,6 @@ import GithubCorner from 'react-github-corner';
 
 export default function PageContainer(){
   const [theme, setTheme] = useState(presetThemes[0].themeColor);
-  console.log('theme', theme)
 
   const updateTheme = (t) => {
     setTheme([...t]);
