@@ -43,7 +43,8 @@ $title-font-size: 1.125rem;
   background-color: $purple;
   color: #fff;
   font-size: $default-font-size;
-
+  overflow-y: auto;
+  
   .sidebar-menu {
     padding: 16px;
 
