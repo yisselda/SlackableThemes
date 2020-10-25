@@ -12,15 +12,23 @@ const ImageUpload = ({ updateThemeColors, loadingColor }) => {
     setFile(acceptedFiles[0]);
     submitImage(acceptedFiles[0]);
   }
-
+  //Limit the accepted file types to be images (.png, .jpeg, .pdf, .gif) for the image uploader.
+  //uses regex to get file extension
   const submitImage = async image => {
+    var reg = /(?:\.([^.]+))?$/;
     setLoadingVisibility('visible');
     let formData = new FormData();
-    formData.append('file', image);
-    const themeJSON = await ApiCommunicator.generateThemeFromFile(formData);
-    const theme = themeJSON.data.split(",");
-    updateThemeColors(theme);
-    setTimeout(() => setLoadingVisibility('hidden'), 1000);
+    let ext = reg.exec(image)[1];
+    if (ext != png && ext != jpeg && ext != pdf && ext != gif) {
+      //need to set back to default
+      break;
+    } else {
+      formData.append('file', image);
+      const themeJSON = await ApiCommunicator.generateThemeFromFile(formData);
+      const theme = themeJSON.data.split(",");
+      updateThemeColors(theme);
+      setTimeout(() => setLoadingVisibility('hidden'), 1000);
+    }
   }
 
   const getOtherTheme = async => {
