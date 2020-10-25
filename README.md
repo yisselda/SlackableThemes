@@ -3,19 +3,18 @@
 
 # SlackableThemes :small_blue_diamond:
 
-Create and preview a Slack theme.
+Create Slack Themes from your uploaded images and style them with interactive theme editor.
 
-https://www.slackable-themes.com/
+https://slackable-themes.com/
 
 ## What?
-
 It enables you to dynamically change, preview and interact with the theme.
 You'll be able to choose between:
 
-- Uploading an image to create random themes -> [See this repo](https://github.com/yisselda/not-purple-please)
+- Uploading an image to create themes with the color palette of the image -> [See this repo](https://github.com/yisselda/not-purple-please)
 - Preset themes
-- Color picking for each element
-- Manually enter string of hex color
+- Pick the color for each element
+- Manually enter the string for the color
 
 ## Features
 
@@ -23,10 +22,13 @@ You'll be able to choose between:
 - Manually set the sidebar's theme.
 - Use Slack's preset themes and modify them.
 - Preview in dark mode. (TBA)
+- Slackbot (TBA)
 
 🏵 Please add feature requests!
 
-![SlackableThemes Mockup](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/SlackableThemesMockUp.png)
+## Here are examples of themes generated 
+![SlackableThemes Instagram Example](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/Instagram-Theme.png)
+![SlackableThemes  Google Theme Example](https://raw.githubusercontent.com/yisselda/SlackableThemes/assets/Google-Theme.jpeg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
