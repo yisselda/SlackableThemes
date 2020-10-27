@@ -1,15 +1,12 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SideBar from '../components/SideBar';
+import SideBar, {channels, messages} from '../components/SideBar';
 import { matchers } from 'jest-emotion';
 
 expect.extend(matchers)
 
 describe('SideBar', () => {
   let wrapper;
-
-  const channels = ['front-end-set-up','general', 'random']
-  const messages = ['Slackbot','yisselda', 'terrance', 'christine']
 
   const aubergine = [
     "#3F0E40",
