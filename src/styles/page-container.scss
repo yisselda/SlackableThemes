@@ -1,5 +1,7 @@
+@import 'sizing';
+
 .page-container {
   display: grid;
-  grid-template-columns: minmax(250px, max-content) auto;
+  grid-template-columns: minmax($sidebar-width, max-content) auto;
   height: 100vh;
 }

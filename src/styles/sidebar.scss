@@ -1,4 +1,5 @@
 @import 'colors';
+@import 'sizing';
 
 $default-font-size: 0.9375rem;
 $user-font-size: 0.875rem;
@@ -43,6 +44,7 @@ $title-font-size: 1.125rem;
   color: #fff;
   font-size: $default-font-size;
   overflow-y: auto;
+  width: $sidebar-width;
   
   .sidebar-menu {
     padding: 16px;
