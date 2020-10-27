@@ -1,5 +1,5 @@
 .page-container {
   display: grid;
   grid-template-columns: minmax(250px, max-content) auto;
-  min-height: 100vh;
+  height: 100vh;
 }
