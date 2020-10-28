@@ -30,7 +30,7 @@ const ImageUpload = ({ updateThemeColors, loadingColor }) => {
   return (
     <div className="image-upload-container">
       <div className="image-upload">
-        <Dropzone onDrop={onDrop} className="dropzone">
+        <Dropzone onDrop={onDrop} accept='image/*' className="dropzone">
           {({getRootProps, getInputProps}) => (
             <div {...getRootProps()} className="image-input" >
               <input {...getInputProps()} />
