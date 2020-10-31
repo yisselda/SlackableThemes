@@ -7,6 +7,7 @@ import DashBoard from '../components/DashBoard';
 import presetThemes from '../data/themes';
 import '../styles/page-container.scss';
 import PropTypes from 'prop-types';
+import GithubCorner from 'react-github-corner';
 
 export default function PageContainer(){
   const [theme, setTheme] = useState(presetThemes[0].themeColor);
@@ -26,6 +27,10 @@ export default function PageContainer(){
     <div className='page-container' css={dm}>
       <SideBar theme={theme} />
       <DashBoard setTheme={updateTheme} setDarkMode={(isOn) => setDarkMode(isOn)} theme={theme}/>
+      <GithubCorner
+        href='https://github.com/yisselda/SlackableThemes'
+        target='__blank'
+      />
     </div>
   )
 };
