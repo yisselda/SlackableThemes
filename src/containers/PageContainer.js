@@ -1,3 +1,6 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
+
 import React, { useState } from 'react'
 import SideBar from '../components/SideBar';
 import DashBoard from '../components/DashBoard';
@@ -8,15 +11,22 @@ import GithubCorner from 'react-github-corner';
 
 export default function PageContainer(){
   const [theme, setTheme] = useState(presetThemes[0].themeColor);
+  const [darkMode, setDarkMode] = useState(false)
 
   const updateTheme = (t) => {
     setTheme([...t]);
   };
 
+  const darkColor = '#1D1A21'
+  const dm = css`
+    background-color: ${darkMode ? darkColor : 'white'};
+    color: ${darkMode ? 'white' : darkColor};
+  `
+
   return (
-    <div className='page-container'>
+    <div className='page-container' css={dm}>
       <SideBar theme={theme} />
-      <DashBoard setTheme={updateTheme} theme={theme}/>
+      <DashBoard setTheme={updateTheme} setDarkMode={(isOn) => setDarkMode(isOn)} theme={theme}/>
       <GithubCorner
         href='https://github.com/yisselda/SlackableThemes'
         target='__blank'
