@@ -4,11 +4,13 @@ import PresetTheme from './PresetTheme';
 import ImageUpload from './ImageUpload';
 import ColorPicker from './ColorPicker';
 import ColorInput from './ColorInput';
+import {ToggleSwitch} from './ToggleSwitch'
 import presetThemes from '../data/themes';
 
-export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge, topNavBg, topNavText ]}) {
+export default function DashBoard({ setTheme, setDarkMode, theme, theme: [ columnBg, menuBgHover, activeItem, activeItemText, hoverItem, textColor, activePresence, mentionBadge, topNavBg, topNavText ]}) {
   const themes = JSON.parse(JSON.stringify(presetThemes)); 
   const [ color, setColor ] = useState('#00ffff');
+  const [ trackDarkMode, setTrackDarkMode ] = useState(false);
 
   let renderThemes = (theme) => {
     return theme.map(t => (
@@ -30,9 +32,15 @@ export default function DashBoard({ setTheme, theme, theme: [ columnBg, menuBgHo
     setTheme(newTheme);
   }
 
+  const toggleDarkMode = (isOn) => {
+    setDarkMode(isOn)
+    setTrackDarkMode(isOn)
+  }
+
   return (
     <div className='dashboard'>
-      <h1 className="slackable-title" style={{color: columnBg}}>Slackable Themes</h1>
+      <ToggleSwitch className='dark-mode-switcher' color={mentionBadge} text='Dark mode' switchChange={toggleDarkMode}/>
+      <h1 className="slackable-title" style={{color: trackDarkMode ? activePresence : columnBg }}>Slackable Themes</h1>
       <p style={{textAlign: "center"}}><em>Create Slack themes from images, photos, and logos.</em></p>
       <h2 className="default-theme-title">Image Upload</h2>
       <ImageUpload updateThemeColors={setTheme} loadingColor={ columnBg }/>
