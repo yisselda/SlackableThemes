@@ -1,15 +1,14 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import SideBar from '../components/SideBar';
+import { render, fireEvent } from '@testing-library/react';
+import { toHaveStyle } from '@testing-library/jest-dom';
+import SideBar, {channels, messages} from '../components/SideBar';
 import { matchers } from 'jest-emotion';
 
 expect.extend(matchers)
 
 describe('SideBar', () => {
   let wrapper;
-
-  const channels = ['front-end-set-up','general', 'random']
-  const messages = ['Slackbot','yisselda', 'terrance', 'christine']
 
   const aubergine = [
     "#3F0E40",
@@ -94,16 +93,17 @@ describe('SideBar', () => {
       expect(wrapper.find('.sidebar-menu')).toHaveStyleRule('background-color', hoverItem, { target: ':hover'});
     })
 
-    it('highlights the active item on focus', () => {
-      wrapper = mount(<SideBar theme={aubergine}/>);
-      const item = wrapper.find(`.${channels[0]}`);
-      expect(item).toHaveStyleRule('background-color', activeItem, { target: ':focus'});
-      expect(item).toHaveStyleRule('color', activeItemText, { target: ':focus'});
-      const item2 = wrapper.find(`.${messages[0]}`);
-      expect(item2).toHaveStyleRule('background-color', activeItem, { target: ':focus'});
-      expect(item2).toHaveStyleRule('color', activeItemText, { target: ':focus'});
-      expect(item).not.toHaveStyleRule('background-color', activeItem);
-      expect(item).not.toHaveStyleRule('color', activeItemText);
+    test('The active item is highlighted on click and remains so until another list item is clicked', () => {
+      const {getByText} = render(<SideBar theme={aubergine}/>);
+      const threadLink = getByText('Threads');
+      fireEvent.click(threadLink);
+      expect(threadLink).toHaveStyle(`backgroundColor: ${activeItem}`);
+      fireEvent.click(getByText('Yisselda'));
+      expect(threadLink).toHaveStyle(`backgroundColor: ${activeItem}`);
+      const peopleLink = getByText('People');
+      fireEvent.click(peopleLink);
+      expect(threadLink).not.toHaveStyle(`backgroundColor: ${activeItem}`);
+      expect(peopleLink).toHaveStyle(`backgroundColor: ${activeItem}`);
     })
 
     it('displays the mention badge with the mention badge color', () => {
