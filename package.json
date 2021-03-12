@@ -55,7 +55,7 @@
     "react": "^16.14.0",
     "react-app-polyfill": "^1.0.6",
     "react-color": "^2.18.1",
-    "react-dev-utils": "^9.1.0",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.14.0",
     "react-dropzone": "^10.2.2",
     "react-github-corner": "^2.5.0",
